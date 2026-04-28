@@ -1,0 +1,182 @@
+Metadata-Version: 2.4
+Name: synconvert
+Version: 1.0.0
+Summary: Offline-first batch video transcoder for mobile playback
+Author: SynonTech
+License: Proprietary - SynonTech
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: static-ffmpeg>=2.5
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: pytest-cov>=5.0; extra == "dev"
+Dynamic: license-file
+
+# SynConvert
+
+Proprietary software - All Rights Reserved.
+No part of this project may be copied, reused, or redistributed without explicit permission.
+
+## Overview
+
+SynConvert is an offline-first batch video transcoder built by SynonTech for preparing media libraries for mobile playback.
+
+It is designed to process full folders of video files, preserve audio and subtitle streams, mirror directory structure, and produce clean, consistently named output files using FFmpeg.
+
+Current version 1.0.0 is focused on dependable local conversion workflows, hardware-aware encoding, persistent job tracking, and practical review controls before conversion begins.
+
+## Core Features
+
+- Batch conversion for full seasons or library folders
+- Mobile-optimized H.264 output with configurable presets
+- Preservation of multiple audio tracks
+- Preservation of subtitle tracks as soft subs
+- Mirrored output folder structure
+- Automatic encoder selection for NVIDIA NVENC, Intel Quick Sync, or CPU fallback
+- Review mode for checking and editing proposed filenames before conversion
+- Persistent queue behavior for interrupted sessions
+- Structured JSON logging for conversion sessions
+- Fully offline operation with no cloud or API dependency
+
+## Project Structure
+
+```text
+SynConvert/
+|-- backend/            # Core application package
+|   |-- config.py       # Global settings
+|   |-- scanner.py      # Folder scanning and media discovery
+|   |-- presets.py      # Encoding preset definitions
+|   |-- hardware.py     # Encoder and hardware detection
+|   |-- naming.py       # Output naming and review flow
+|   |-- converter.py    # FFmpeg execution pipeline
+|   |-- queue.py        # Persistent conversion queue handling
+|   |-- logger.py       # Console and JSON logging
+|   `-- main.py         # CLI entry point
+|-- tests/              # Unit tests
+|-- pyproject.toml      # Package metadata and CLI entry point
+|-- requirements.txt    # Base dependency list
+|-- README.md           # Project overview
+`-- LICENSE.txt         # Proprietary source license
+```
+
+## Setup Instructions
+
+### Prerequisites
+
+- Python 3.11 or newer
+- FFmpeg is handled automatically through `static-ffmpeg`
+
+### Installation
+
+```bash
+git clone https://github.com/synontechsa-hub/SynConvert.git
+cd SynConvert
+python -m venv .venv
+.venv\Scripts\activate
+pip install -e .
+```
+
+For development tooling and tests:
+
+```bash
+pip install -e ".[dev]"
+```
+
+## Usage
+
+### Scan a folder without converting
+
+```bash
+synconvert scan --input "D:/Anime/Failure Frame"
+```
+
+### Convert a folder
+
+```bash
+synconvert convert --input "D:/Anime/Failure Frame" --output "D:/Mobile/Failure Frame"
+```
+
+### Convert without review mode
+
+```bash
+synconvert convert --input "D:/Anime/Dandadan" --output "D:/Mobile/Dandadan" --no-review
+```
+
+### Use the storage saver preset
+
+```bash
+synconvert convert --input "D:/Anime/Show" --output "D:/Mobile/Show" --preset 480p_saver
+```
+
+### Use a custom naming template
+
+```bash
+synconvert convert --input "D:/Anime/Show" --output "D:/Mobile/Show" --template "S{S:02d}E{E:02d} - {title}"
+```
+
+Available template variables:
+
+- `{S}` for season number
+- `{E}` for episode number
+- `{title}` for episode title, with fallback naming when needed
+
+### Check queue status
+
+```bash
+synconvert status
+```
+
+### List presets
+
+```bash
+synconvert presets
+```
+
+## Presets
+
+- `720p_mobile`: default balanced preset for quality and size
+- `480p_saver`: lower-resolution preset for storage savings
+
+Both presets currently target:
+
+- MKV container output
+- H.264 video
+- AAC audio
+
+## Hardware Acceleration
+
+SynConvert automatically prefers the best available encoder in this order:
+
+1. `h264_nvenc`
+2. `h264_qsv`
+3. `libx264`
+
+A specific encoder can also be forced manually:
+
+```bash
+synconvert convert --input ... --output ... --encoder libx264
+```
+
+## Output Rules
+
+- Source files are never modified
+- Output is always written to a separate target directory
+- Input directory structure is mirrored in the output
+- Default naming follows the `S01E03 - Episode Title.mkv` pattern
+
+## Testing
+
+```bash
+pytest
+```
+
+## License
+
+This project is proprietary and confidential.
+See [LICENSE.txt](LICENSE.txt) for the full SynonTech Proprietary Source License.
+
+## Contact / Ownership
+
+Owner: Syn (SynonTech)
+Repository: SynConvert GitHub
