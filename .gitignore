@@ -1,0 +1,36 @@
+# Python / Backend
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+.venv/
+.env
+.env.local
+*.env
+*.log
+
+# Flutter / Dart
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+.dart_tool/
+.gradle/
+.idea/
+*.iml
+
+# IDE / Editor
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.bak
+
+# Dev internals (project-specific — add your own _dev paths here)
+_dev/
+
+# Misc
+.DS_Store
+Thumbs.db
