@@ -21,7 +21,7 @@ class _WizardPageState extends State<WizardPage> {
   Future<void> _pickInputFolder() async {
     // FIX: FilePicker.platform is deprecated in file_picker v5+
     // Use FilePicker.instance instead
-    final result = await FilePicker.instance.getDirectoryPath(
+    final result = await FilePicker.getDirectoryPath(
       dialogTitle: 'Select Source Folder',
     );
     if (result != null) {
@@ -35,7 +35,7 @@ class _WizardPageState extends State<WizardPage> {
   }
 
   Future<void> _pickOutputFolder() async {
-    final result = await FilePicker.instance.getDirectoryPath(
+    final result = await FilePicker.getDirectoryPath(
       dialogTitle: 'Select Output Folder',
     );
     if (result != null) {
@@ -125,17 +125,15 @@ class _WizardPageState extends State<WizardPage> {
           Text(
             'New Conversion Job',
             style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
           ),
           const SizedBox(height: 32),
           if (_inputPath == null)
             _buildFolderPicker()
           else if (_isScanning)
-            const Expanded(
-              child: Center(child: CircularProgressIndicator()),
-            )
+            const Expanded(child: Center(child: CircularProgressIndicator()))
           else if (_isConverting)
             Expanded(child: _buildConversionLog())
           else if (_proposals != null)
@@ -157,9 +155,7 @@ class _WizardPageState extends State<WizardPage> {
             color: const Color(0xFF161616),
             borderRadius: BorderRadius.circular(32),
             // FIX: withOpacity deprecated — use withValues(alpha:)
-            border: Border.all(
-              color: Colors.white.withValues(alpha: 0.05),
-            ),
+            border: Border.all(color: Colors.white.withValues(alpha: 0.05)),
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -288,9 +284,7 @@ class _WizardPageState extends State<WizardPage> {
             decoration: BoxDecoration(
               color: const Color(0xFF161616),
               borderRadius: BorderRadius.circular(24),
-              border: Border.all(
-                color: Colors.white.withValues(alpha: 0.05),
-              ),
+              border: Border.all(color: Colors.white.withValues(alpha: 0.05)),
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(24),
@@ -310,22 +304,26 @@ class _WizardPageState extends State<WizardPage> {
                       .map(
                         (p) => DataRow(
                           cells: [
-                            DataCell(Text(
-                              p.relative,
-                              style: const TextStyle(fontSize: 12),
-                            )),
-                            DataCell(Text(
-                              'S${p.season.toString().padLeft(2, '0')}',
-                            )),
-                            DataCell(Text(
-                              'E${p.episode.toString().padLeft(2, '0')}',
-                            )),
-                            DataCell(Text(
-                              p.outputFilename,
-                              style: const TextStyle(
-                                color: Color(0xFF00D2FF),
+                            DataCell(
+                              Text(
+                                p.relative,
+                                style: const TextStyle(fontSize: 12),
                               ),
-                            )),
+                            ),
+                            DataCell(
+                              Text('S${p.season.toString().padLeft(2, '0')}'),
+                            ),
+                            DataCell(
+                              Text('E${p.episode.toString().padLeft(2, '0')}'),
+                            ),
+                            DataCell(
+                              Text(
+                                p.outputFilename,
+                                style: const TextStyle(
+                                  color: Color(0xFF00D2FF),
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       )
@@ -347,14 +345,18 @@ class _WizardPageState extends State<WizardPage> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF00D2FF),
                 foregroundColor: Colors.black,
-                disabledBackgroundColor: const Color(0xFF00D2FF).withValues(alpha: 0.3),
+                disabledBackgroundColor: const Color(
+                  0xFF00D2FF,
+                ).withValues(alpha: 0.3),
                 minimumSize: const Size(200, 56),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
               ),
               child: Text(
-                _outputPath != null ? 'Start Conversion' : 'Select Output First',
+                _outputPath != null
+                    ? 'Start Conversion'
+                    : 'Select Output First',
                 style: const TextStyle(fontWeight: FontWeight.bold),
               ),
             ),
@@ -402,7 +404,9 @@ class _WizardPageState extends State<WizardPage> {
                 Color lineColor = Colors.white.withValues(alpha: 0.7);
                 if (line.contains('✓') || line.contains('success')) {
                   lineColor = const Color(0xFF2ECC71);
-                } else if (line.contains('✗') || line.contains('failed') || line.contains('Error')) {
+                } else if (line.contains('✗') ||
+                    line.contains('failed') ||
+                    line.contains('Error')) {
                   lineColor = Colors.redAccent;
                 } else if (line.contains('⟳') || line.contains('Retry')) {
                   lineColor = Colors.orangeAccent;
