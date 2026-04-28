@@ -1,36 +1,67 @@
 # Python / Backend
-*.pyc
-*.pyo
-*.pyd
-__pycache__/
-.venv/
-.env
-.env.local
-*.env
-*.log
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/__pycache__/
+**/.mypy_cache/
+**/.pytest_cache/
+**/.venv/
+**/.env
+**/.env.local
+**/*.env
+**/*.log
 
-# Flutter / Dart
+# ==================== FLUTTER / DART ====================
+
+# Main build outputs (this should catch most cases)
 build/
-.flutter-plugins
-.flutter-plugins-dependencies
-.packages
-.pub-cache/
-.pub/
-.dart_tool/
+**/build/
+
+# Flutter Web specific build output
+build/web/
+**/build/web/
+
+# Android
+android/.gradle/
+android/app/build/
+android/build/
 .gradle/
-.idea/
-*.iml
+
+# iOS
+ios/build/
+ios/Flutter/Flutter.framework/
+ios/Flutter/Flutter.podspec
+ios/Pods/
+Podfile.lock
+
+# Dart / Pub
+**/.dart_tool/
+**/.packages
+**/.pub-cache/
+**/.pub/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.metadata
+
+# Generated release files
+*.apk
+*.aab
+*.ipa
+*.jks
+*.keystore
 
 # IDE / Editor
+.idea/
+*.iml
 .vscode/
 *.sublime-project
 *.sublime-workspace
 *.swp
 *.bak
 
-# Dev internals (project-specific — add your own _dev paths here)
+# Project specific
 _dev/
 
-# Misc
+# OS
 .DS_Store
 Thumbs.db

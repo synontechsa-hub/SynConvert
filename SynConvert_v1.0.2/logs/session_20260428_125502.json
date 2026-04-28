@@ -1,0 +1,45 @@
+{
+  "session_start": "2026-04-28T12:55:02.466851",
+  "records": [
+    {
+      "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E01.The.Heros.Homecoming.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E01 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator The Heros Homecoming Bili Aac2 0 H 264 Varyg.mkv",
+      "preset": "720p_mobile",
+      "encoder": "Intel QuickSync (GPU)",
+      "status": "success",
+      "duration_seconds": 90.79920749999292,
+      "error": null,
+      "timestamp": "2026-04-28T10:56:33.307442+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E02.The.Vankreift.Familys.Problem.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E02 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator The Vankreift Familys Problem Bili Aac2 0 H 264 Varyg.mkv",
+      "preset": "720p_mobile",
+      "encoder": "Intel QuickSync (GPU)",
+      "status": "success",
+      "duration_seconds": 89.83830899999884,
+      "error": null,
+      "timestamp": "2026-04-28T10:58:03.215942+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E03.King.Ravisel.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E03 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator King Ravisel Bili Aac2 0 H 264 Varyg.mkv",
+      "preset": "720p_mobile",
+      "encoder": "Intel QuickSync (GPU)",
+      "status": "success",
+      "duration_seconds": 87.68673059999128,
+      "error": null,
+      "timestamp": "2026-04-28T10:59:30.997597+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E04.Vahls.Divine.Judgment.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E04 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator Vahls Divine Judgment Bili Aac2 0 H 264 Varyg.mkv",
+      "preset": "720p_mobile",
+      "encoder": "Intel QuickSync (GPU)",
+      "status": "success",
+      "duration_seconds": 93.99874469998758,
+      "error": null,
+      "timestamp": "2026-04-28T11:01:05.077660+00:00"
+    }
+  ]
+}

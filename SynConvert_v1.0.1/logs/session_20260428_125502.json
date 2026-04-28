@@ -1,0 +1,125 @@
+{
+  "session_start": "2026-04-28T12:55:02.466851",
+  "records": [
+    {
+      "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E01.The.Heros.Homecoming.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E01 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator The Heros Homecoming Bili Aac2 0 H 264 Varyg.mkv",
+      "preset": "720p_mobile",
+      "encoder": "Intel QuickSync (GPU)",
+      "status": "success",
+      "duration_seconds": 90.79920749999292,
+      "error": null,
+      "timestamp": "2026-04-28T10:56:33.307442+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E02.The.Vankreift.Familys.Problem.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E02 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator The Vankreift Familys Problem Bili Aac2 0 H 264 Varyg.mkv",
+      "preset": "720p_mobile",
+      "encoder": "Intel QuickSync (GPU)",
+      "status": "success",
+      "duration_seconds": 89.83830899999884,
+      "error": null,
+      "timestamp": "2026-04-28T10:58:03.215942+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E03.King.Ravisel.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E03 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator King Ravisel Bili Aac2 0 H 264 Varyg.mkv",
+      "preset": "720p_mobile",
+      "encoder": "Intel QuickSync (GPU)",
+      "status": "success",
+      "duration_seconds": 87.68673059999128,
+      "error": null,
+      "timestamp": "2026-04-28T10:59:30.997597+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E04.Vahls.Divine.Judgment.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E04 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator Vahls Divine Judgment Bili Aac2 0 H 264 Varyg.mkv",
+      "preset": "720p_mobile",
+      "encoder": "Intel QuickSync (GPU)",
+      "status": "success",
+      "duration_seconds": 93.99874469998758,
+      "error": null,
+      "timestamp": "2026-04-28T11:01:05.077660+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E05.The.Royals.and.Spirits.Feud.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E05 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator The Royals And Spirits Feud Bili Aac2 0 H 264 Varyg.mkv",
+      "preset": "720p_mobile",
+      "encoder": "Intel QuickSync (GPU)",
+      "status": "success",
+      "duration_seconds": 93.47239550000813,
+      "error": null,
+      "timestamp": "2026-04-28T11:02:38.629803+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E06.The.Spirit.Festivals.Significance.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E06 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator The Spirit Festivals Significance Bili Aac2 0 H 264 Varyg.mkv",
+      "preset": "720p_mobile",
+      "encoder": "Intel QuickSync (GPU)",
+      "status": "success",
+      "duration_seconds": 102.98539499999606,
+      "error": null,
+      "timestamp": "2026-04-28T11:04:21.709625+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E07.The.Mines.Curse.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E07 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator The Mines Curse Bili Aac2 0 H 264 Varyg.mkv",
+      "preset": "720p_mobile",
+      "encoder": "Intel QuickSync (GPU)",
+      "status": "success",
+      "duration_seconds": 120.17678439999872,
+      "error": null,
+      "timestamp": "2026-04-28T11:06:21.986188+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E08.Rafilias.Melancholy.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E08 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator Rafilias Melancholy Bili Aac2 0 H 264 Varyg.mkv",
+      "preset": "720p_mobile",
+      "encoder": "Intel QuickSync (GPU)",
+      "status": "success",
+      "duration_seconds": 106.86401420000766,
+      "error": null,
+      "timestamp": "2026-04-28T11:08:08.934597+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E09.Healing.Princess.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E09 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator Healing Princess Bili Aac2 0 H 264 Varyg.mkv",
+      "preset": "720p_mobile",
+      "encoder": "Intel QuickSync (GPU)",
+      "status": "success",
+      "duration_seconds": 106.90925129999232,
+      "error": null,
+      "timestamp": "2026-04-28T11:09:55.919967+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E10.Abduction.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E10 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator Abduction Bili Aac2 0 H 264 Varyg.mkv",
+      "preset": "720p_mobile",
+      "encoder": "Intel QuickSync (GPU)",
+      "status": "success",
+      "duration_seconds": 104.41023059999861,
+      "error": null,
+      "timestamp": "2026-04-28T11:11:40.398897+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E11.Ravisels.Agenda.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E11 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator Ravisels Agenda Bili Aac2 0 H 264 Varyg.mkv",
+      "preset": "720p_mobile",
+      "encoder": "Intel QuickSync (GPU)",
+      "status": "success",
+      "duration_seconds": 109.31149089999963,
+      "error": null,
+      "timestamp": "2026-04-28T11:13:29.792787+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E12.Between.Humans.and.Spirits.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E12 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator Between Humans And Spirits Bili Aac2 0 H 264 Varyg.mkv",
+      "preset": "720p_mobile",
+      "encoder": "Intel QuickSync (GPU)",
+      "status": "success",
+      "duration_seconds": 106.32885089999763,
+      "error": null,
+      "timestamp": "2026-04-28T11:15:16.204048+00:00"
+    }
+  ]
+}
