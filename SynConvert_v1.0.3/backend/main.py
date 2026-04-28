@@ -15,6 +15,7 @@ def main():
         "config":   handlers.handle_config,
         "encoders": handlers.handle_encoders,
         "scan":     handlers.handle_scan,
+        "convert":  handlers.handle_convert,
         "status":   handlers.handle_status,
         "queue":    handlers.handle_queue,
         "presets":  handlers.handle_presets,
