@@ -15,6 +15,7 @@ class _SettingsPageState extends State<SettingsPage>
   bool get wantKeepAlive => true;
 
   Map<String, dynamic>? _config;
+  List<Map<String, dynamic>> _availableEncoders = [];
   bool _isLoading = true;
   bool _isSaving = false;
 
@@ -34,8 +35,10 @@ class _SettingsPageState extends State<SettingsPage>
     try {
       final bridge = context.read<BackendBridge>();
       final config = await bridge.getConfig();
+      final encoders = await bridge.getAvailableEncoders();
       setState(() {
         _config = config;
+        _availableEncoders = encoders;
         _outputDirController.text = config['output_dir'] ?? '';
         _namingTemplateController.text = config['naming_template'] ?? '';
         _maxRetriesController.text = (config['max_retries'] ?? 1).toString();
@@ -164,7 +167,6 @@ class _SettingsPageState extends State<SettingsPage>
                       'Number of attempts per file if FFmpeg fails.',
                       width: 150,
                     ),
-                    const SizedBox(height: 24),
                     _buildDropdown(
                       'Default Resolution',
                       _config!['default_preset'],
@@ -173,6 +175,20 @@ class _SettingsPageState extends State<SettingsPage>
                         '480p_saver': '480p Storage Saver',
                       },
                       (val) => setState(() => _config!['default_preset'] = val),
+                    ),
+                    const SizedBox(height: 32),
+                    _buildSectionHeader('Hardware'),
+                    _buildDropdown(
+                      'Preferred GPU / Encoder',
+                      _config!['force_encoder'] ?? '',
+                      {
+                        '': 'Auto-Detect (Best Available)',
+                        for (var e in _availableEncoders)
+                          e['video_encoder'] as String: e['label'] as String,
+                      },
+                      (val) => setState(() {
+                        _config!['force_encoder'] = val == '' ? null : val;
+                      }),
                     ),
                     const SizedBox(height: 40),
                     ElevatedButton.icon(

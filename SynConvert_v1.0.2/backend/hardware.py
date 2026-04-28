@@ -155,3 +155,37 @@ def detect_encoder(force: str | None = None) -> EncoderInfo:
         label="CPU (libx264)",
         is_hardware=False,
     )
+
+
+def get_available_backends() -> list[EncoderInfo]:
+    """Return a list of all encoders that successfully passed detection."""
+    ffmpeg = _ffmpeg_bin()
+    backends = []
+
+    # Check NVENC
+    if _encoder_available(ffmpeg, "h264_nvenc") and _test_nvenc(ffmpeg):
+        backends.append(EncoderInfo(
+            backend=EncoderBackend.NVENC,
+            video_encoder="h264_nvenc",
+            label="NVIDIA NVENC (GPU)",
+            is_hardware=True,
+        ))
+
+    # Check QSV
+    if _encoder_available(ffmpeg, "h264_qsv") and _test_qsv(ffmpeg):
+        backends.append(EncoderInfo(
+            backend=EncoderBackend.QSV,
+            video_encoder="h264_qsv",
+            label="Intel QuickSync (GPU)",
+            is_hardware=True,
+        ))
+
+    # CPU is always available
+    backends.append(EncoderInfo(
+        backend=EncoderBackend.CPU,
+        video_encoder="libx264",
+        label="CPU (libx264)",
+        is_hardware=False,
+    ))
+
+    return backends

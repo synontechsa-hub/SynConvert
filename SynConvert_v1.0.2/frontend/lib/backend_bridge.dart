@@ -115,7 +115,6 @@ class BackendBridge {
       return BackendStatus.pythonMissing;
     }
   }
-
   /// Fetch the current backend configuration.
   Future<Map<String, dynamic>> getConfig() async {
     final result = await Process.run(
@@ -131,6 +130,24 @@ class BackendBridge {
     }
 
     return jsonDecode(result.stdout as String) as Map<String, dynamic>;
+  }
+
+  /// Fetch list of available hardware encoders.
+  Future<List<Map<String, dynamic>>> getAvailableEncoders() async {
+    final result = await Process.run(
+      _pythonPath,
+      ['-u', '-m', 'backend.main', 'encoders'],
+      workingDirectory: _backendRoot,
+      environment: _pythonEnv,
+      stdoutEncoding: utf8,
+    );
+
+    if (result.exitCode != 0) {
+      throw Exception('Failed to get encoders: ${result.stderr}');
+    }
+
+    final List<dynamic> list = jsonDecode(result.stdout as String);
+    return list.map((e) => e as Map<String, dynamic>).toList();
   }
 
   /// Update the backend configuration.

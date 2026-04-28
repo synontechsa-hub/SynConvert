@@ -28,7 +28,7 @@ sys.stderr.reconfigure(encoding="utf-8", errors="replace")  # type: ignore[attr-
 
 from backend.config import load_config, save_config, DEFAULT_CONFIG_FILE
 from backend.converter import DiskFullError, convert_file
-from backend.hardware import detect_encoder
+from backend.hardware import detect_encoder, get_available_backends
 from backend.logger import SynLogger
 from backend.naming import build_proposals, review_proposals, DEFAULT_TEMPLATE
 from backend.presets import get_preset, list_presets
@@ -409,11 +409,26 @@ def build_parser() -> argparse.ArgumentParser:
     # -- presets --
     sub.add_parser("presets", help="List available presets")
 
+    # -- encoders --
+    sub.add_parser("encoders", help="List available hardware backends")
+
     return parser
 
 
 # ---------------------------------------------------------------------------
-# Entry point
+# Sub-command: encoders
+# ---------------------------------------------------------------------------
+
+def cmd_encoders(args: argparse.Namespace) -> int:
+    """List available hardware encoders."""
+    import json
+    backends = get_available_backends()
+    print(json.dumps([asdict(b) for b in backends], indent=2))
+    return 0
+
+
+# ---------------------------------------------------------------------------
+# Main entry point
 # ---------------------------------------------------------------------------
 
 def main() -> None:
@@ -427,6 +442,7 @@ def main() -> None:
         "convert": cmd_convert,
         "status":  cmd_status,
         "presets": cmd_presets,
+        "encoders": cmd_encoders,
     }
 
     handler = handlers.get(args.command)
