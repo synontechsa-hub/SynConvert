@@ -423,7 +423,15 @@ def cmd_encoders(args: argparse.Namespace) -> int:
     """List available hardware encoders."""
     import json
     backends = get_available_backends()
-    print(json.dumps([asdict(b) for b in backends], indent=2))
+    
+    # Convert Enum to strings for JSON serialization
+    results = []
+    for b in backends:
+        d = asdict(b)
+        d["backend"] = b.backend.name
+        results.append(d)
+        
+    print(json.dumps(results, indent=2))
     return 0
 
 

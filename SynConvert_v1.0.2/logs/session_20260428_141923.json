@@ -10,6 +10,56 @@
       "duration_seconds": 828.4164003999904,
       "error": null,
       "timestamp": "2026-04-28T12:33:11.542794+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 02 (BD 1080p) [A2A3156F].mkv",
+      "output": "",
+      "preset": "",
+      "encoder": "",
+      "status": "skipped",
+      "duration_seconds": 0.0,
+      "error": null,
+      "timestamp": "2026-04-28T12:33:11.613766+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 03 (BD 1080p) [2A012883].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E03 - Uma Musume Pretty Derby.mkv",
+      "preset": "720p_mobile",
+      "encoder": "Intel QuickSync (GPU)",
+      "status": "success",
+      "duration_seconds": 929.0675889999984,
+      "error": null,
+      "timestamp": "2026-04-28T12:48:40.760513+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 04 (BD 1080p) [C85795F8].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E04 - Uma Musume Pretty Derby.mkv",
+      "preset": "720p_mobile",
+      "encoder": "Intel QuickSync (GPU)",
+      "status": "success",
+      "duration_seconds": 740.5516306999925,
+      "error": null,
+      "timestamp": "2026-04-28T13:01:01.372892+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 05 (BD 1080p) [BE60BF96].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E05 - Uma Musume Pretty Derby.mkv",
+      "preset": "720p_mobile",
+      "encoder": "Intel QuickSync (GPU)",
+      "status": "success",
+      "duration_seconds": 627.4043442000111,
+      "error": null,
+      "timestamp": "2026-04-28T13:11:28.845990+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 06 (BD 1080p) [42F4C024].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E06 - Uma Musume Pretty Derby.mkv",
+      "preset": "720p_mobile",
+      "encoder": "Intel QuickSync (GPU)",
+      "status": "success",
+      "duration_seconds": 686.1680941999948,
+      "error": null,
+      "timestamp": "2026-04-28T13:22:55.095035+00:00"
     }
   ]
 }

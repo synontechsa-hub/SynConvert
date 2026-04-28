@@ -22,7 +22,7 @@
     "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 03 (BD 1080p) [2A012883].mkv",
     "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E03 - Uma Musume Pretty Derby.mkv",
     "preset": "720p_mobile",
-    "status": "in_progress",
+    "status": "done",
     "error": null,
     "attempts": 1
   },
@@ -31,36 +31,36 @@
     "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 04 (BD 1080p) [C85795F8].mkv",
     "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E04 - Uma Musume Pretty Derby.mkv",
     "preset": "720p_mobile",
-    "status": "pending",
+    "status": "done",
     "error": null,
-    "attempts": 0
+    "attempts": 1
   },
   {
     "id": "c009310b-1396-447c-a584-68fc42a3c683",
     "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 05 (BD 1080p) [BE60BF96].mkv",
     "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E05 - Uma Musume Pretty Derby.mkv",
     "preset": "720p_mobile",
-    "status": "pending",
+    "status": "done",
     "error": null,
-    "attempts": 0
+    "attempts": 1
   },
   {
     "id": "72ed4942-ce61-46f2-939c-f5f93ed8255d",
     "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 06 (BD 1080p) [42F4C024].mkv",
     "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E06 - Uma Musume Pretty Derby.mkv",
     "preset": "720p_mobile",
-    "status": "pending",
+    "status": "done",
     "error": null,
-    "attempts": 0
+    "attempts": 1
   },
   {
     "id": "af87ae46-36ab-43e8-84aa-5b77bc26f619",
     "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 07 (BD 1080p) [E33BE8CF].mkv",
     "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E07 - Uma Musume Pretty Derby.mkv",
     "preset": "720p_mobile",
-    "status": "pending",
+    "status": "in_progress",
     "error": null,
-    "attempts": 0
+    "attempts": 1
   },
   {
     "id": "2aa772c2-61d9-4329-9238-c256aae64b37",

@@ -5,7 +5,7 @@
   "review_before_convert": true,
   "skip_existing": true,
   "max_retries": 1,
-  "force_encoder": null,
+  "force_encoder": "h264_nvenc",
   "log_dir": "D:\\Coding\\SynonTech\\SynConvert\\SynConvert_v1.0.2\\logs",
   "queue_file": "D:\\Coding\\SynonTech\\SynConvert\\SynConvert_v1.0.2\\synconvert_queue.json"
 }

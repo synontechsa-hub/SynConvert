@@ -1,0 +1,11 @@
+{
+  "output_dir": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert",
+  "default_preset": "720p_mobile",
+  "naming_template": "S{S:02d}E{E:02d} - {title}",
+  "review_before_convert": true,
+  "skip_existing": true,
+  "max_retries": 1,
+  "force_encoder": null,
+  "log_dir": "D:\\Coding\\SynonTech\\SynConvert\\SynConvert_v1.0.2\\logs",
+  "queue_file": "D:\\Coding\\SynonTech\\SynConvert\\SynConvert_v1.0.2\\synconvert_queue.json"
+}

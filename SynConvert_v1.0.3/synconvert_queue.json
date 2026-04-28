@@ -1,0 +1,668 @@
+[
+  {
+    "id": "1e1162d7-e6f9-47ac-b0a7-4c82379f667a",
+    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 01 (BD 1080p) [761E3F3E].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E01 - Uma Musume Pretty Derby.mkv",
+    "preset": "720p_mobile",
+    "status": "done",
+    "error": null,
+    "attempts": 2
+  },
+  {
+    "id": "ba0d2896-9d00-499e-817c-b8ba29b94ca5",
+    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 02 (BD 1080p) [A2A3156F].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E02 - Uma Musume Pretty Derby.mkv",
+    "preset": "720p_mobile",
+    "status": "done",
+    "error": null,
+    "attempts": 1
+  },
+  {
+    "id": "2dc51d06-13ac-45b5-a178-199d78e39bac",
+    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 03 (BD 1080p) [2A012883].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E03 - Uma Musume Pretty Derby.mkv",
+    "preset": "720p_mobile",
+    "status": "done",
+    "error": null,
+    "attempts": 1
+  },
+  {
+    "id": "5adac1e7-c32c-4117-9c5e-d5d8d4815974",
+    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 04 (BD 1080p) [C85795F8].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E04 - Uma Musume Pretty Derby.mkv",
+    "preset": "720p_mobile",
+    "status": "done",
+    "error": null,
+    "attempts": 1
+  },
+  {
+    "id": "c009310b-1396-447c-a584-68fc42a3c683",
+    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 05 (BD 1080p) [BE60BF96].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E05 - Uma Musume Pretty Derby.mkv",
+    "preset": "720p_mobile",
+    "status": "done",
+    "error": null,
+    "attempts": 1
+  },
+  {
+    "id": "72ed4942-ce61-46f2-939c-f5f93ed8255d",
+    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 06 (BD 1080p) [42F4C024].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E06 - Uma Musume Pretty Derby.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 1
+  },
+  {
+    "id": "af87ae46-36ab-43e8-84aa-5b77bc26f619",
+    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 07 (BD 1080p) [E33BE8CF].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E07 - Uma Musume Pretty Derby.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "2aa772c2-61d9-4329-9238-c256aae64b37",
+    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 08 (BD 1080p) [90BF3A01].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E08 - Uma Musume Pretty Derby.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "7d3291d1-376a-4e27-b6f2-5756090b2e01",
+    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 09 (BD 1080p) [A26ABDD9].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E09 - Uma Musume Pretty Derby.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "6a9a8049-c5df-4e1d-9843-e334f33dfeee",
+    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 10 (BD 1080p) [AC0FD709].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E10 - Uma Musume Pretty Derby.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "8ec2143a-9978-4f07-bd3f-f0fb6630a065",
+    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 11 (BD 1080p) [45FD3EE7].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E11 - Uma Musume Pretty Derby.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "49f309b9-71bd-4135-8d84-8d061bd9a374",
+    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 12 (BD 1080p) [61B3CF30].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E12 - Uma Musume Pretty Derby.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "1e0f8f7c-009c-4d03-84e3-5db568cd5fb5",
+    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 13 (BD 1080p) [1401A473].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E13 - Uma Musume Pretty Derby.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "94335b76-cf6d-4f68-a4fe-27269e147144",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 01 (BD 1080p) [9F9CF4B9].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 2\\S02E01 - Uma Musume Pretty Derby S2.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "29a3016a-b0f9-461b-b64b-df1019ac95f8",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 02 (BD 1080p) [C0A7DC1B].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 2\\S02E02 - Uma Musume Pretty Derby S2.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "078d5591-9cf3-4535-a898-cf3d451596c0",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 03 (BD 1080p) [B0A24D76].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 2\\S02E03 - Uma Musume Pretty Derby S2.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "cabe60e3-d953-4880-91a9-f82201f72e2b",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 04 (BD 1080p) [EBD6CA5C].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 2\\S02E04 - Uma Musume Pretty Derby S2.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "66012e83-3c40-4578-a5ca-e784c4aa6f6b",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 05 (BD 1080p) [5DF5F7D7].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 2\\S02E05 - Uma Musume Pretty Derby S2.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "84b2eafb-494f-4a95-ac07-7c4cefdac95f",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 06 (BD 1080p) [C1FA77F6].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 2\\S02E06 - Uma Musume Pretty Derby S2.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "abac3374-af87-451a-a070-106236af4949",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 07 (BD 1080p) [5863B592].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 2\\S02E07 - Uma Musume Pretty Derby S2.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "3a6769a9-bf47-45ce-b9d5-ca6b9f2f99db",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 08 (BD 1080p) [26D44F05].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 2\\S02E08 - Uma Musume Pretty Derby S2.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "c762a4ad-0ef0-4b60-9732-23107d6c9d9c",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 09 (BD 1080p) [87ED26CD].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 2\\S02E09 - Uma Musume Pretty Derby S2.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "07054ef5-fd0d-4dbb-ab55-059f37686d6f",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 10 (BD 1080p) [C5B54315].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 2\\S02E10 - Uma Musume Pretty Derby S2.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "2d220e40-a9b2-469b-a758-d79c5a7f6f3c",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 11 (BD 1080p) [3F642CD5].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 2\\S02E11 - Uma Musume Pretty Derby S2.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "2e8698bd-89fb-4f67-801e-9695559f5c43",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 12 (BD 1080p) [6000063E].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 2\\S02E12 - Uma Musume Pretty Derby S2.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "242acfc8-55af-4282-82d0-d15e2a8ec919",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 13 (BD 1080p) [D5CE4867].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 2\\S02E13 - Uma Musume Pretty Derby S2.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "f0af4664-a9f2-4b4f-a912-6e2d3ff10ba8",
+    "source": "F:\\Anime\\Uma Musume\\Season 3,5 - BNW no Chikai\\[MiniMTBB] Uma Musume Pretty Derby - S00E01 (BD 1080p) [9A03B7D6].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 3,5 - BNW no Chikai\\S03E01 - Uma Musume Pretty Derby.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "c9b9e9cd-adb0-4fa0-8daf-7cdf18e47b7b",
+    "source": "F:\\Anime\\Uma Musume\\Season 3,5 - BNW no Chikai\\[MiniMTBB] Uma Musume Pretty Derby - S00E02 (BD 1080p) [C391CB00].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 3,5 - BNW no Chikai\\S03E02 - Uma Musume Pretty Derby.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "cdffbefa-924c-4125-b7f1-291a5317b4eb",
+    "source": "F:\\Anime\\Uma Musume\\Season 3,5 - BNW no Chikai\\[MiniMTBB] Uma Musume Pretty Derby - S00E03 (BD 1080p) [AF28CD31].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 3,5 - BNW no Chikai\\S03E03 - Uma Musume Pretty Derby.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "5765bba7-4fc8-4185-a8b7-b3cfd6991fda",
+    "source": "F:\\Anime\\Uma Musume\\Season 3\\[MiniMTBB] Uma Musume Pretty Derby S3 - 01 (BD 1080p) [68BCC7E2].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 3\\S03E01 - Uma Musume Pretty Derby S3.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "104d4a8d-c49a-4fd1-9dd9-670efd7f6db7",
+    "source": "F:\\Anime\\Uma Musume\\Season 3\\[MiniMTBB] Uma Musume Pretty Derby S3 - 02 (BD 1080p) [74790EDB].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 3\\S03E02 - Uma Musume Pretty Derby S3.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "1e9465f3-fb9b-4f03-9b00-df7b7adbe146",
+    "source": "F:\\Anime\\Uma Musume\\Season 3\\[MiniMTBB] Uma Musume Pretty Derby S3 - 03 (BD 1080p) [C8660EEF].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 3\\S03E03 - Uma Musume Pretty Derby S3.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "64d39e63-c3b6-4cb8-9aab-e1357fd79985",
+    "source": "F:\\Anime\\Uma Musume\\Season 3\\[MiniMTBB] Uma Musume Pretty Derby S3 - 04 (BD 1080p) [F512A998].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 3\\S03E04 - Uma Musume Pretty Derby S3.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "31d9d149-1ee3-4e42-a81c-c353571f9cc4",
+    "source": "F:\\Anime\\Uma Musume\\Season 3\\[MiniMTBB] Uma Musume Pretty Derby S3 - 05 (BD 1080p) [71A7B820].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 3\\S03E05 - Uma Musume Pretty Derby S3.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "c1302e2c-b096-4b96-9212-59775812efbf",
+    "source": "F:\\Anime\\Uma Musume\\Season 3\\[MiniMTBB] Uma Musume Pretty Derby S3 - 06 (BD 1080p) [2B860210].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 3\\S03E06 - Uma Musume Pretty Derby S3.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "984c1032-bcf4-484c-b347-ad5a5c3b80da",
+    "source": "F:\\Anime\\Uma Musume\\Season 3\\[MiniMTBB] Uma Musume Pretty Derby S3 - 07 (BD 1080p) [05D0B6ED].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 3\\S03E07 - Uma Musume Pretty Derby S3.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "54c0a136-3c76-4361-bd36-00b884a2bf61",
+    "source": "F:\\Anime\\Uma Musume\\Season 3\\[MiniMTBB] Uma Musume Pretty Derby S3 - 08 (BD 1080p) [831147F9].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 3\\S03E08 - Uma Musume Pretty Derby S3.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "a6cd4931-7a2e-40b4-a2dc-d4be10819a04",
+    "source": "F:\\Anime\\Uma Musume\\Season 3\\[MiniMTBB] Uma Musume Pretty Derby S3 - 09 (BD 1080p) [2BD230F1].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 3\\S03E09 - Uma Musume Pretty Derby S3.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "5965e2e3-2ec0-4042-bb62-55d19e198d34",
+    "source": "F:\\Anime\\Uma Musume\\Season 3\\[MiniMTBB] Uma Musume Pretty Derby S3 - 10 (BD 1080p) [B4A4AD6B].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 3\\S03E10 - Uma Musume Pretty Derby S3.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "8118ac5d-f1d7-451e-9332-f3d96899fee5",
+    "source": "F:\\Anime\\Uma Musume\\Season 3\\[MiniMTBB] Uma Musume Pretty Derby S3 - 11 (BD 1080p) [B20BE8AB].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 3\\S03E11 - Uma Musume Pretty Derby S3.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "c7f8946c-cdd9-4fea-b3f0-636a24a53a77",
+    "source": "F:\\Anime\\Uma Musume\\Season 3\\[MiniMTBB] Uma Musume Pretty Derby S3 - 12 (BD 1080p) [BD7DA82C].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 3\\S03E12 - Uma Musume Pretty Derby S3.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "7b267ce9-feb5-4058-b5b2-b6d97d54229f",
+    "source": "F:\\Anime\\Uma Musume\\Season 3\\[MiniMTBB] Uma Musume Pretty Derby S3 - 13 (BD 1080p) [3FC86E19].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 3\\S03E13 - Uma Musume Pretty Derby S3.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "6e0d60be-61ab-45d3-a4e9-99e7ed90c1d4",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 1\\Umamusume - Cinderella Gray (2025) - S01E01 (Bluray-1080p AV1 Opus)-Pi13.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 1\\S04E01 - Umamusume Cinderella Gray Pi13.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "e43b989e-75b6-486f-9d97-f4cd512e5b81",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 1\\Umamusume - Cinderella Gray (2025) - S01E02 (Bluray-1080p AV1 Opus)-Pi13.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 1\\S04E02 - Umamusume Cinderella Gray Pi13.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "65ce40dd-228a-49fc-b848-f865e8b1a205",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 1\\Umamusume - Cinderella Gray (2025) - S01E03 (Bluray-1080p AV1 Opus)-Pi13.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 1\\S04E03 - Umamusume Cinderella Gray Pi13.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "888206e0-efff-45b4-aaf2-e6fc2a36e127",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 1\\Umamusume - Cinderella Gray (2025) - S01E04 (Bluray-1080p AV1 Opus)-Pi13.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 1\\S04E04 - Umamusume Cinderella Gray Pi13.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "788c304a-f111-43b4-a560-1bd47fb6bd31",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 1\\Umamusume - Cinderella Gray (2025) - S01E05 (Bluray-1080p AV1 Opus)-Pi13.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 1\\S04E05 - Umamusume Cinderella Gray Pi13.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "c9b04aa3-fa9c-4732-abce-3f1d3d6a2c47",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 1\\Umamusume - Cinderella Gray (2025) - S01E06 (Bluray-1080p AV1 Opus)-Pi13.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 1\\S04E06 - Umamusume Cinderella Gray Pi13.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "977e7ccd-b254-416f-a7e8-838a22996c26",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 1\\Umamusume - Cinderella Gray (2025) - S01E07 (Bluray-1080p AV1 Opus)-Pi13.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 1\\S04E07 - Umamusume Cinderella Gray Pi13.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "d1d70a4d-624f-41f6-b3f2-2bfe2cf6239c",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 1\\Umamusume - Cinderella Gray (2025) - S01E08 (Bluray-1080p AV1 Opus)-Pi13.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 1\\S04E08 - Umamusume Cinderella Gray Pi13.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "3aef8560-9880-400f-b101-3f88f3160745",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 1\\Umamusume - Cinderella Gray (2025) - S01E09 (Bluray-1080p AV1 Opus)-Pi13.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 1\\S04E09 - Umamusume Cinderella Gray Pi13.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "5d8b0b3e-3af1-47b4-af17-5ff9674e55a8",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 1\\Umamusume - Cinderella Gray (2025) - S01E10 (Bluray-1080p AV1 Opus)-Pi13.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 1\\S04E10 - Umamusume Cinderella Gray Pi13.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "d4c30e1c-127a-4fc9-9ad5-26dd9a822e09",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 1\\Umamusume - Cinderella Gray (2025) - S01E11 (Bluray-1080p AV1 Opus)-Pi13.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 1\\S04E11 - Umamusume Cinderella Gray Pi13.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "63ea45a3-49c8-45ad-9268-73b48ce9c4e4",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 1\\Umamusume - Cinderella Gray (2025) - S01E12 (Bluray-1080p AV1 Opus)-Pi13.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 1\\S04E12 - Umamusume Cinderella Gray Pi13.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "6fcbd4cf-d480-4d65-b2b4-622ed610ccf0",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 1\\Umamusume - Cinderella Gray (2025) - S01E13 (Bluray-1080p AV1 Opus)-Pi13.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 1\\S04E13 - Umamusume Cinderella Gray Pi13.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "2fca6e38-df1d-4e23-8f43-8cd1f97ebca5",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 2\\[Erai-raws] Uma Musume - Cinderella Gray Part 2 - 01 [1080p AMZN WEBRip HEVC EAC3][MultiSub][9E0F199C].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 2\\S04E01 - Uma Musume Cinderella Gray Part.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "77ea052b-8634-4726-ba5b-1643c071f817",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 2\\[Erai-raws] Uma Musume - Cinderella Gray Part 2 - 02 [1080p ADN WEBRip HEVC AAC][MultiSub][832F186F].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 2\\S04E02 - Uma Musume Cinderella Gray Part.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "81dee661-a45d-4cc7-bc08-5b67ab691bb1",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 2\\[Erai-raws] Uma Musume - Cinderella Gray Part 2 - 03 [1080p ADN WEB-DL AVC AAC][MultiSub][F49FE191].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 2\\S04E03 - Uma Musume Cinderella Gray Part.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "292ab9f4-c0e6-4903-b0da-ca9ac3c99270",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 2\\[Erai-raws] Uma Musume - Cinderella Gray Part 2 - 04 [1080p ADN WEB-DL AVC AAC][MultiSub][F7AD7E89].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 2\\S04E04 - Uma Musume Cinderella Gray Part.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "dfbced09-36b0-4093-bb82-20761676e28d",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 2\\[Erai-raws] Uma Musume - Cinderella Gray Part 2 - 05 [1080p ADN WEB-DL AVC AAC][MultiSub][A2D8B247].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 2\\S04E05 - Uma Musume Cinderella Gray Part.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "2b07b296-8a64-4c9c-a3ee-7e3a5908963e",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 2\\[Erai-raws] Uma Musume - Cinderella Gray Part 2 - 06 [1080p ADN WEB-DL AVC AAC][MultiSub][10239EA2].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 2\\S04E06 - Uma Musume Cinderella Gray Part.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "9c74b201-8666-45d9-94b9-6d15c750cddb",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 2\\[Erai-raws] Uma Musume - Cinderella Gray Part 2 - 07 [1080p AMZN WEBRip HEVC EAC3][MultiSub][D1376F31].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 2\\S04E07 - Uma Musume Cinderella Gray Part.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "933e8c15-1f80-4187-92d9-6d731bd21ad1",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 2\\[Erai-raws] Uma Musume - Cinderella Gray Part 2 - 08 [1080p AMZN WEBRip HEVC EAC3][MultiSub][9057446A].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 2\\S04E08 - Uma Musume Cinderella Gray Part.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "2f4548af-907e-4c0c-819f-53c23061875d",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 2\\[Erai-raws] Uma Musume - Cinderella Gray Part 2 - 09 [1080p AMZN WEBRip HEVC EAC3][MultiSub][B980A8B3].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 2\\S04E09 - Uma Musume Cinderella Gray Part.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "cf1de7d2-cdf9-4741-a021-46ff010affa4",
+    "source": "F:\\Anime\\Uma Musume\\Season 4 - Cinderella Gray\\Part 2\\[Erai-raws] Uma Musume - Cinderella Gray Part 2 - 10 [1080p AMZN WEBRip HEVC EAC3][MultiSub][6CC2BC3B].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 4 - Cinderella Gray\\Part 2\\S04E10 - Uma Musume Cinderella Gray Part.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "a148b4ba-7773-42c4-a329-8fd6b23fd306",
+    "source": "F:\\Anime\\Uma Musume\\Uma Musume Pretty Derby - Beginning of a New Era (2024).mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\S01E14 - Uma Musume Pretty Derby Beginning Of A New Era.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "109fd279-ec0b-4beb-b283-cd54f6ac4e82",
+    "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E05.The.Royals.and.Spirits.Feud.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E05 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator The Royals And Spirits Feud Bili Aac2 0 H 264 Varyg.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 1
+  },
+  {
+    "id": "6659fc4f-225f-4c21-bf0c-1758dcf608e4",
+    "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E06.The.Spirit.Festivals.Significance.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E06 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator The Spirit Festivals Significance Bili Aac2 0 H 264 Varyg.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "422d9483-3367-4759-b085-2f405e6345fe",
+    "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E07.The.Mines.Curse.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E07 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator The Mines Curse Bili Aac2 0 H 264 Varyg.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "53aec801-3860-47ae-a3d8-79d6379a7ca9",
+    "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E08.Rafilias.Melancholy.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E08 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator Rafilias Melancholy Bili Aac2 0 H 264 Varyg.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "76cec15f-b871-4c2f-9295-dbf47d6fb517",
+    "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E09.Healing.Princess.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E09 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator Healing Princess Bili Aac2 0 H 264 Varyg.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "fd2552ac-6cc9-4745-918f-0bef89968477",
+    "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E10.Abduction.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E10 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator Abduction Bili Aac2 0 H 264 Varyg.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "21a0d7ed-ddfe-43c9-8ac0-b8463886190e",
+    "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E11.Ravisels.Agenda.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E11 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator Ravisels Agenda Bili Aac2 0 H 264 Varyg.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "15d3711e-b374-4f39-a5b8-e3e1f4cebd0c",
+    "source": "F:\\Anime\\Dad is a Hero, Mom is a Spirit, I'm a Reincarnator\\Dad.is.a.hero.Mom.is.a.spirit.Im.a.reincarnator.S01E12.Between.Humans.and.Spirits.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E12 - Dad Is A Hero Mom Is A Spirit Im A Reincarnator Between Humans And Spirits Bili Aac2 0 H 264 Varyg.mkv",
+    "preset": "720p_mobile",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  }
+]
