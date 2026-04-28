@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import 'backend_bridge.dart';
 import 'pages/dashboard_page.dart';
 import 'pages/wizard_page.dart';
+import 'pages/queue_page.dart';
+import 'pages/settings_page.dart';
 
 void main() {
   runApp(
@@ -137,10 +139,8 @@ class _MainLayoutState extends State<MainLayout> {
       children: const [
         DashboardPage(),
         WizardPage(),
-        // Placeholder for Queue
-        Center(child: Text('Queue Coming Soon')),
-        // Placeholder for Settings
-        Center(child: Text('Settings Coming Soon')),
+        QueuePage(),
+        SettingsPage(),
       ],
     );
   }

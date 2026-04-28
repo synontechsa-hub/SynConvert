@@ -10,7 +10,10 @@ class WizardPage extends StatefulWidget {
   State<WizardPage> createState() => _WizardPageState();
 }
 
-class _WizardPageState extends State<WizardPage> {
+class _WizardPageState extends State<WizardPage> with AutomaticKeepAliveClientMixin {
+  @override
+  bool get wantKeepAlive => true;
+
   String? _inputPath;
   String? _outputPath;
   List<ScanProposal>? _proposals;
@@ -93,7 +96,18 @@ class _WizardPageState extends State<WizardPage> {
 
       await for (final line in stream) {
         if (mounted) {
-          setState(() => _conversionLog.add(line));
+          setState(() {
+            // Smart Append: If the new line is a progress update (timer),
+            // and the last line in the log was also a progress update,
+            // overwrite it instead of adding a new one.
+            if (line.contains('⏱') &&
+                _conversionLog.isNotEmpty &&
+                _conversionLog.last.contains('⏱')) {
+              _conversionLog[_conversionLog.length - 1] = line;
+            } else {
+              _conversionLog.add(line);
+            }
+          });
         }
       }
     } catch (e) {
@@ -117,6 +131,7 @@ class _WizardPageState extends State<WizardPage> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Padding(
       padding: const EdgeInsets.all(32.0),
       child: Column(

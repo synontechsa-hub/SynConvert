@@ -9,7 +9,7 @@ def main():
     frontend_dir = root / "frontend"
     venv_python = root / ".venv" / "Scripts" / "python.exe"
 
-    print("🚀 SynConvert v1.0.1 Launcher")
+    print("🚀 SynConvert v1.0.2 Launcher")
     print("━" * 30)
 
     # 1. Check Environment

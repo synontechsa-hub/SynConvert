@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import argparse
 import sys
+from dataclasses import asdict
 from pathlib import Path
 
 # Force UTF-8 output so Flutter's utf8.decoder never sees unexpected bytes,
@@ -156,17 +157,48 @@ def cmd_convert(args: argparse.Namespace) -> int:
     logger.session_start(total_files=len(active), encoder_label=encoder.label)
 
     # --- Convert ---
+    ok = _process_queue(queue, encoder, logger, cfg)
+
+    logger.session_end()
+    return 0 if ok else 1
+
+
+def _process_queue(queue: JobQueue, encoder: EncoderInfo, logger: SynLogger, cfg: SynConvertConfig) -> bool:
+    """Shared logic to process pending jobs in a queue."""
     pending = queue.pending()
+    if not pending:
+        print("No pending jobs to process.")
+        return True
+
     total = len(pending)
     failed_count = 0
 
+    from backend.presets import get_preset  # local import to avoid circular dependency
+    from backend.naming import ScanResult, NameProposal  # local import
+
     for i, job in enumerate(pending, start=1):
-        proposal = next(
-            (p for p in active if str(p.scan_result.source_path) == job.source),
-            None,
-        )
-        if proposal is None:
+        try:
+            preset = get_preset(job.preset)
+        except ValueError as exc:
+            print(f"Error loading preset '{job.preset}' for job: {exc}")
+            job.mark_failed(f"Invalid preset: {job.preset}")
+            queue.update(job)
+            failed_count += 1
             continue
+
+        # Re-create a minimal proposal for the converter.
+        # The converter primarily needs scan_result.source_path and output_path.
+        proposal = NameProposal(
+            scan_result=ScanResult(
+                source_path=Path(job.source), 
+                relative_path=Path(job.source).name
+            ),
+            season=1, # Placeholder
+            episode=0, # Placeholder
+            title="Resumed Job", # Placeholder
+            output_filename=Path(job.output).name,
+            output_path=Path(job.output),
+        )
 
         logger.file_start(i, total, job.source)
         job.mark_in_progress()
@@ -185,8 +217,7 @@ def cmd_convert(args: argparse.Namespace) -> int:
             logger.error(str(exc))
             job.mark_failed(str(exc))
             queue.update(job)
-            logger.session_end()
-            return 1
+            return False
 
         if ok:
             job.mark_done()
@@ -195,8 +226,42 @@ def cmd_convert(args: argparse.Namespace) -> int:
             failed_count += 1
         queue.update(job)
 
-    logger.session_end()
-    return 1 if failed_count else 0
+    return failed_count == 0
+
+
+# ---------------------------------------------------------------------------
+# Sub-command: queue (Management)
+# ---------------------------------------------------------------------------
+
+def cmd_queue(args: argparse.Namespace) -> int:
+    """Manage and resume the job queue."""
+    cfg = load_config()
+    queue = JobQueue(cfg.queue_file)
+
+    if args.clear_done:
+        removed = queue.clear_completed()
+        print(f"Removed {removed} completed/skipped job(s).")
+        return 0
+
+    if args.reset_failed:
+        reset = queue.reset_failed()
+        print(f"Reset {reset} failed job(s) to pending.")
+        return 0
+
+    if args.resume:
+        print("Detecting hardware encoder…")
+        encoder = detect_encoder(force=cfg.force_encoder)
+        print(f"  Selected: {encoder.label}")
+
+        logger = SynLogger(cfg.log_dir)
+        logger.session_start(total_files=len(queue.pending()), encoder_label=encoder.label)
+        
+        ok = _process_queue(queue, encoder, logger, cfg)
+        
+        logger.session_end()
+        return 0 if ok else 1
+
+    return 0
 
 
 # ---------------------------------------------------------------------------
@@ -269,6 +334,37 @@ def cmd_presets(_args: argparse.Namespace) -> int:
 
 
 # ---------------------------------------------------------------------------
+# Sub-command: config
+# ---------------------------------------------------------------------------
+
+def cmd_config(args: argparse.Namespace) -> int:
+    """Read or write the global configuration."""
+    if args.get:
+        cfg = load_config()
+        import json as _json
+        print(_json.dumps(asdict(cfg), indent=2))
+        return 0
+
+    if args.set:
+        import json as _json
+        try:
+            updates = _json.loads(args.set)
+            cfg = load_config()
+            # Update current config with provided fields
+            for k, v in updates.items():
+                if hasattr(cfg, k):
+                    setattr(cfg, k, v)
+            save_config(cfg)
+            print("Configuration updated successfully.")
+            return 0
+        except _json.JSONDecodeError:
+            print("Error: Invalid JSON provided for --set", file=sys.stderr)
+            return 1
+
+    return 0
+
+
+# ---------------------------------------------------------------------------
 # Argument parser
 # ---------------------------------------------------------------------------
 
@@ -278,6 +374,17 @@ def build_parser() -> argparse.ArgumentParser:
         description="SynConvert — Offline batch video transcoder",
     )
     sub = parser.add_subparsers(dest="command", required=True)
+
+    # -- config --
+    p_config = sub.add_parser("config", help="Read or update global configuration")
+    p_config.add_argument("--get", action="store_true", help="Get current config as JSON")
+    p_config.add_argument("--set", help="Update config with a JSON string")
+
+    # -- queue --
+    p_queue = sub.add_parser("queue", help="Manage the job queue")
+    p_queue.add_argument("--resume", action="store_true", help="Process pending jobs in the queue")
+    p_queue.add_argument("--clear-done", action="store_true", help="Remove completed/skipped jobs")
+    p_queue.add_argument("--reset-failed", action="store_true", help="Reset failed jobs to pending")
 
     # -- scan --
     p_scan = sub.add_parser("scan", help="Scan a directory and list video files")
@@ -314,6 +421,8 @@ def main() -> None:
     args = parser.parse_args()
 
     handlers = {
+        "config":  cmd_config,
+        "queue":   cmd_queue,
         "scan":    cmd_scan,
         "convert": cmd_convert,
         "status":  cmd_status,

@@ -1,5 +1,3 @@
-LICENSE.txt
-README.md
 pyproject.toml
 backend/__init__.py
 backend/config.py
@@ -11,6 +9,7 @@ backend/naming.py
 backend/presets.py
 backend/queue.py
 backend/scanner.py
+frontend/ios/Flutter/ephemeral/flutter_lldb_helper.py
 synconvert.egg-info/PKG-INFO
 synconvert.egg-info/SOURCES.txt
 synconvert.egg-info/dependency_links.txt

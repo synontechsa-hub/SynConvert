@@ -116,6 +116,113 @@ class BackendBridge {
     }
   }
 
+  /// Fetch the current backend configuration.
+  Future<Map<String, dynamic>> getConfig() async {
+    final result = await Process.run(
+      _pythonPath,
+      ['-u', '-m', 'backend.main', 'config', '--get'],
+      workingDirectory: _backendRoot,
+      environment: _pythonEnv,
+      stdoutEncoding: utf8,
+    );
+
+    if (result.exitCode != 0) {
+      throw Exception('Failed to get config: ${result.stderr}');
+    }
+
+    return jsonDecode(result.stdout as String) as Map<String, dynamic>;
+  }
+
+  /// Update the backend configuration.
+  Future<void> setConfig(Map<String, dynamic> config) async {
+    final configJson = jsonEncode(config);
+    final result = await Process.run(
+      _pythonPath,
+      ['-u', '-m', 'backend.main', 'config', '--set', configJson],
+      workingDirectory: _backendRoot,
+      environment: _pythonEnv,
+      stdoutEncoding: utf8,
+    );
+
+    if (result.exitCode != 0) {
+      throw Exception('Failed to set config: ${result.stderr}');
+    }
+  }
+
+  /// Remove completed/skipped jobs from the queue.
+  Future<void> clearCompletedJobs() async {
+    final result = await Process.run(
+      _pythonPath,
+      ['-u', '-m', 'backend.main', 'queue', '--clear-done'],
+      workingDirectory: _backendRoot,
+      environment: _pythonEnv,
+    );
+    if (result.exitCode != 0) {
+      throw Exception('Failed to clear queue: ${result.stderr}');
+    }
+  }
+
+  /// Reset failed jobs back to pending.
+  Future<void> resetFailedJobs() async {
+    final result = await Process.run(
+      _pythonPath,
+      ['-u', '-m', 'backend.main', 'queue', '--reset-failed'],
+      workingDirectory: _backendRoot,
+      environment: _pythonEnv,
+    );
+    if (result.exitCode != 0) {
+      throw Exception('Failed to reset queue: ${result.stderr}');
+    }
+  }
+
+  /// Resume processing the current queue.
+  Stream<String> resumeQueue() async* {
+    final process = await Process.start(
+      _pythonPath,
+      ['-u', '-m', 'backend.main', 'queue', '--resume'],
+      workingDirectory: _backendRoot,
+      environment: _pythonEnv,
+    );
+
+    final controller = StreamController<String>();
+
+    final stdoutSub = process.stdout
+        .transform(Utf8Decoder(allowMalformed: true))
+        .transform(const LineSplitter())
+        .listen(controller.add, onError: controller.addError);
+
+    final stderrSub = process.stderr
+        .transform(Utf8Decoder(allowMalformed: true))
+        .transform(const LineSplitter())
+        .listen(controller.add, onError: controller.addError);
+
+    Future.wait([stdoutSub.asFuture(), stderrSub.asFuture()]).then((_) async {
+      await process.exitCode;
+      await controller.close();
+    });
+
+    yield* controller.stream;
+  }
+
+  /// Get the current status of all jobs in the queue.
+  Future<List<Map<String, dynamic>>> getQueueStatus() async {
+    final result = await Process.run(
+      _pythonPath,
+      ['-u', '-m', 'backend.main', 'status', '--json'],
+      workingDirectory: _backendRoot,
+      environment: _pythonEnv,
+      stdoutEncoding: utf8,
+    );
+
+    if (result.exitCode != 0) {
+      // If queue doesn't exist yet, it's not strictly an error for the UI.
+      return [];
+    }
+
+    final List<dynamic> data = jsonDecode(result.stdout as String);
+    return data.cast<Map<String, dynamic>>();
+  }
+
   /// Run a scan on the input directory and return a list of proposals.
   Future<List<ScanProposal>> scanDirectory(String inputPath) async {
     final result = await Process.run(
