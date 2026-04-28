@@ -53,19 +53,26 @@ class BackendBridge {
   // from which we can reliably locate the .venv regardless of how the app
   // was launched (via launch.py, flutter run, or direct .exe).
   String get _backendRoot {
+    // FIX: First check for SYNCONVERT_ROOT env var set by launch.py
+    // This is the most reliable method since launch.py knows the exact root.
+    final envRoot = Platform.environment['SYNCONVERT_ROOT'];
+    if (envRoot != null && envRoot.isNotEmpty) {
+      return envRoot;
+    }
+
+    // Fallback: walk up from the executable looking for .venv
+    // Handles cases where the app is launched directly without launch.py
     final exeDir = File(Platform.resolvedExecutable).parent;
-    // In debug (flutter run): exe is in build/windows/x64/runner/Debug/
-    // Walk up to find the SynConvert root (where .venv lives)
-    // We look for .venv up to 6 levels up
     Directory dir = exeDir;
     for (int i = 0; i < 6; i++) {
       final venv = Directory(p.join(dir.path, '.venv'));
       if (venv.existsSync()) return dir.path;
       final parent = dir.parent;
-      if (parent.path == dir.path) break; // reached filesystem root
+      if (parent.path == dir.path) break;
       dir = parent;
     }
-    // Fallback: assume we're running from the project root
+
+    // Last resort: current working directory
     return Directory.current.path;
   }
 
