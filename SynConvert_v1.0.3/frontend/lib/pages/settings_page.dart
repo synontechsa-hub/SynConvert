@@ -19,6 +19,9 @@ class _SettingsPageState extends State<SettingsPage>
   bool _isLoading = true;
   bool _isSaving = false;
 
+  String _selectedRes = '720p';
+  String _selectedQuality = 'medium';
+
   final TextEditingController _outputDirController = TextEditingController();
   final TextEditingController _namingTemplateController =
       TextEditingController();
@@ -42,6 +45,18 @@ class _SettingsPageState extends State<SettingsPage>
         _outputDirController.text = config['output_dir'] ?? '';
         _namingTemplateController.text = config['naming_template'] ?? '';
         _maxRetriesController.text = (config['max_retries'] ?? 1).toString();
+
+        final preset = config['default_preset'] as String? ?? '720p_medium';
+        final parts = preset.split('_');
+        if (parts.length == 2) {
+          _selectedRes = parts[0];
+          _selectedQuality = parts[1];
+        } else {
+          // Handle legacy or unknown formats
+          _selectedRes = '720p';
+          _selectedQuality = 'medium';
+        }
+
         _isLoading = false;
       });
     } catch (e) {
@@ -58,7 +73,7 @@ class _SettingsPageState extends State<SettingsPage>
         'output_dir': _outputDirController.text,
         'naming_template': _namingTemplateController.text,
         'max_retries': int.tryParse(_maxRetriesController.text) ?? 1,
-        'default_preset': _config!['default_preset'],
+        'default_preset': '${_selectedRes}_$_selectedQuality',
         'review_before_convert': _config!['review_before_convert'],
         'skip_existing': _config!['skip_existing'],
         'force_encoder': _config!['force_encoder'],
@@ -169,12 +184,24 @@ class _SettingsPageState extends State<SettingsPage>
                     ),
                     _buildDropdown(
                       'Default Resolution',
-                      _config!['default_preset'],
+                      _selectedRes,
                       const {
-                        '720p_mobile': '720p Mobile (Recommended)',
-                        '480p_saver': '480p Storage Saver',
+                        '1080p': '1080p (Full HD)',
+                        '720p': '720p (HD)',
+                        '480p': '480p (SD)',
                       },
-                      (val) => setState(() => _config!['default_preset'] = val),
+                      (val) => setState(() => _selectedRes = val),
+                    ),
+                    const SizedBox(height: 16),
+                    _buildDropdown(
+                      'Default Quality',
+                      _selectedQuality,
+                      const {
+                        'high': 'High (Best Quality)',
+                        'medium': 'Medium (Balanced)',
+                        'low': 'Low (Smallest Size)',
+                      },
+                      (val) => setState(() => _selectedQuality = val),
                     ),
                     const SizedBox(height: 32),
                     _buildSectionHeader('Hardware'),

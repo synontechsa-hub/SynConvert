@@ -18,6 +18,7 @@ class _QueuePageState extends State<QueuePage> with AutomaticKeepAliveClientMixi
   bool _isProcessing = false;
   final List<String> _consoleLog = [];
   final ScrollController _consoleScrollController = ScrollController();
+  final Set<String> _selectedIds = {};
 
   @override
   void initState() {
@@ -61,6 +62,60 @@ class _QueuePageState extends State<QueuePage> with AutomaticKeepAliveClientMixi
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Error: $e'), backgroundColor: Colors.redAccent),
         );
+      }
+    }
+  }
+
+  Future<void> _removeSelected() async {
+    if (_selectedIds.isEmpty) return;
+    try {
+      await context.read<BackendBridge>().removeJobs(_selectedIds.toList());
+      _selectedIds.clear();
+      _refreshQueue();
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Error: $e'), backgroundColor: Colors.redAccent),
+        );
+      }
+    }
+  }
+
+  Future<void> _clearAllHistory() async {
+    final bridge = context.read<BackendBridge>();
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        backgroundColor: const Color(0xFF161616),
+        title: const Text('Clear All History', style: TextStyle(color: Colors.white)),
+        content: const Text(
+          'This will remove all completed, failed, and skipped jobs from the queue. Pending jobs will be kept. Continue?',
+          style: TextStyle(color: Colors.white70),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context, false),
+            child: const Text('Cancel'),
+          ),
+          TextButton(
+            onPressed: () => Navigator.pop(context, true),
+            style: TextButton.styleFrom(foregroundColor: Colors.redAccent),
+            child: const Text('Clear All'),
+          ),
+        ],
+      ),
+    );
+
+    if (confirmed == true) {
+      try {
+        await bridge.clearAllHistory();
+        _refreshQueue();
+      } catch (e) {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('Error: $e'), backgroundColor: Colors.redAccent),
+          );
+        }
       }
     }
   }
@@ -145,31 +200,40 @@ class _QueuePageState extends State<QueuePage> with AutomaticKeepAliveClientMixi
               ),
               Row(
                 children: [
-                  if (_isProcessing)
+                  if (_selectedIds.isNotEmpty)
                     _buildActionButton(
-                      icon: Icons.stop_rounded,
-                      label: 'Stop Processing',
+                      icon: Icons.delete_sweep_rounded,
+                      label: 'Remove Selected (${_selectedIds.length})',
                       color: Colors.redAccent,
-                      onPressed: _stopProcessing,
+                      onPressed: _removeSelected,
                     )
-                  else
+                  else ...[
+                    if (_isProcessing)
+                      _buildActionButton(
+                        icon: Icons.stop_rounded,
+                        label: 'Stop Processing',
+                        color: Colors.redAccent,
+                        onPressed: _stopProcessing,
+                      )
+                    else
+                      _buildActionButton(
+                        icon: Icons.play_arrow_rounded,
+                        label: 'Resume Queue',
+                        color: const Color(0xFF00D2FF),
+                        onPressed: _jobs != null && _jobs!.any((j) => j['status'] == 'pending')
+                            ? _resumeQueue
+                            : null,
+                      ),
+                    const SizedBox(width: 12),
                     _buildActionButton(
-                      icon: Icons.play_arrow_rounded,
-                      label: 'Resume Queue',
-                      color: const Color(0xFF00D2FF),
-                      onPressed: _jobs != null && _jobs!.any((j) => j['status'] == 'pending')
-                          ? _resumeQueue
+                      icon: Icons.restore_rounded,
+                      label: 'Reset Failed',
+                      color: Colors.orangeAccent,
+                      onPressed: _jobs != null && _jobs!.any((j) => j['status'] == 'failed')
+                          ? _resetFailed
                           : null,
                     ),
-                  const SizedBox(width: 12),
-                  _buildActionButton(
-                    icon: Icons.restore_rounded,
-                    label: 'Reset Failed',
-                    color: Colors.orangeAccent,
-                    onPressed: _jobs != null && _jobs!.any((j) => j['status'] == 'failed')
-                        ? _resetFailed
-                        : null,
-                  ),
+                  ],
                   const SizedBox(width: 12),
                   _buildActionButton(
                     icon: Icons.cleaning_services_rounded,
@@ -177,6 +241,15 @@ class _QueuePageState extends State<QueuePage> with AutomaticKeepAliveClientMixi
                     color: Colors.white24,
                     onPressed: _jobs != null && _jobs!.any((j) => j['status'] == 'done' || j['status'] == 'skipped')
                         ? _clearCompleted
+                        : null,
+                  ),
+                  const SizedBox(width: 12),
+                  _buildActionButton(
+                    icon: Icons.history_rounded,
+                    label: 'Clear History',
+                    color: Colors.redAccent.withValues(alpha: 0.5),
+                    onPressed: _jobs != null && _jobs!.any((j) => j['status'] != 'pending' && j['status'] != 'in_progress')
+                        ? _clearAllHistory
                         : null,
                   ),
                   const SizedBox(width: 12),
@@ -221,17 +294,34 @@ class _QueuePageState extends State<QueuePage> with AutomaticKeepAliveClientMixi
                   child: SingleChildScrollView(
                     child: DataTable(
                       headingRowColor: WidgetStateProperty.all(const Color(0xFF222222)),
-                      columns: const [
-                        DataColumn(label: Text('Status')),
-                        DataColumn(label: Text('Source File')),
-                        DataColumn(label: Text('Attempts')),
-                        DataColumn(label: Text('Output')),
+                      columns: [
+                        DataColumn(
+                          label: Checkbox(
+                            value: _jobs != null && _jobs!.isNotEmpty && _selectedIds.length == _jobs!.length,
+                            onChanged: (val) {
+                              setState(() {
+                                if (val == true) {
+                                  _selectedIds.addAll(_jobs!.map((j) => j['id'] as String));
+                                } else {
+                                  _selectedIds.clear();
+                                }
+                              });
+                            },
+                          ),
+                        ),
+                        const DataColumn(label: Text('Status')),
+                        const DataColumn(label: Text('Source File')),
+                        const DataColumn(label: Text('Attempts')),
+                        const DataColumn(label: Text('Output')),
                       ],
                       rows: _jobs!.map((job) {
+                        final id = job['id'] as String;
                         final status = job['status'] as String;
                         final source = job['source'] as String;
+                        final attempts = job['attempts'] ?? 0;
+                        final output = job['output'] as String;
                         final filename = source.split('\\').last.split('/').last;
-                        
+
                         Color statusColor = Colors.white70;
                         IconData statusIcon = Icons.help_outline;
 
@@ -252,10 +342,25 @@ class _QueuePageState extends State<QueuePage> with AutomaticKeepAliveClientMixi
                             statusColor = Colors.redAccent;
                             statusIcon = Icons.error_rounded;
                             break;
+                          case 'skipped':
+                            statusColor = Colors.white38;
+                            statusIcon = Icons.skip_next_rounded;
+                            break;
                         }
 
                         return DataRow(
+                          selected: _selectedIds.contains(id),
+                          onSelectChanged: (val) {
+                            setState(() {
+                              if (val == true) {
+                                _selectedIds.add(id);
+                              } else {
+                                _selectedIds.remove(id);
+                              }
+                            });
+                          },
                           cells: [
+                            DataCell(const SizedBox.shrink()), // Reserved for built-in checkbox
                             DataCell(
                               Row(
                                 mainAxisSize: MainAxisSize.min,
@@ -273,16 +378,21 @@ class _QueuePageState extends State<QueuePage> with AutomaticKeepAliveClientMixi
                                 ],
                               ),
                             ),
-                            DataCell(Text(filename, style: const TextStyle(fontSize: 12))),
-                            DataCell(Text(job['attempts'].toString())),
                             DataCell(
-                              Text(
-                                job['output'].toString(),
-                                style: TextStyle(
-                                  color: Colors.white.withValues(alpha: 0.4),
-                                  fontSize: 10,
+                              Tooltip(
+                                message: source,
+                                child: Text(filename, style: const TextStyle(fontSize: 12)),
+                              ),
+                            ),
+                            DataCell(Text(attempts.toString(), style: const TextStyle(fontSize: 12))),
+                            DataCell(
+                              Tooltip(
+                                message: output,
+                                child: Text(
+                                  output.split('\\').last.split('/').last,
+                                  style: TextStyle(color: Colors.white.withValues(alpha: 0.4), fontSize: 12),
+                                  overflow: TextOverflow.ellipsis,
                                 ),
-                                overflow: TextOverflow.ellipsis,
                               ),
                             ),
                           ],

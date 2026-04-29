@@ -67,6 +67,21 @@ class QueueService:
         if count: self._save()
         return count
 
+    def remove_by_ids(self, ids: List[str]) -> int:
+        """Remove specific jobs by their IDs. Returns count removed."""
+        before = len(self._jobs)
+        id_set = set(ids)
+        self._jobs = [j for j in self._jobs if j.id not in id_set]
+        self._save()
+        return before - len(self._jobs)
+
+    def clear_all_history(self) -> int:
+        """Remove all non-pending jobs (done, failed, skipped). Returns count removed."""
+        before = len(self._jobs)
+        self._jobs = [j for j in self._jobs if j.status == JobStatus.PENDING]
+        self._save()
+        return before - len(self._jobs)
+
     def get_summary(self) -> Dict[str, int]:
         counts = {s.value: 0 for s in JobStatus}
         for j in self._jobs:

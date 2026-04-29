@@ -6,6 +6,6 @@
   "skip_existing": true,
   "max_retries": 1,
   "force_encoder": null,
-  "log_dir": "D:\\Coding\\SynonTech\\SynConvert\\SynConvert_v1.0.2\\logs",
-  "queue_file": "D:\\Coding\\SynonTech\\SynConvert\\SynConvert_v1.0.2\\synconvert_queue.json"
+  "log_dir": "D:\\Coding\\SynonTech\\SynConvert\\SynConvert_v1.0.3\\logs",
+  "queue_file": "D:\\Coding\\SynonTech\\SynConvert\\SynConvert_v1.0.3\\synconvert_queue.json"
 }

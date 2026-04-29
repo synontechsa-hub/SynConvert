@@ -88,9 +88,16 @@ def handle_queue(args: argparse.Namespace) -> int:
     if args.clear_done:
         n = svc.clear_completed()
         print(f"Cleared {n} jobs.")
+    elif args.clear_all:
+        n = svc.clear_all_history()
+        print(f"Cleared {n} jobs from history.")
     elif args.reset_failed:
         n = svc.reset_failed()
         print(f"Reset {n} jobs.")
+    elif args.remove:
+        ids = [i.strip() for i in args.remove.split(",") if i.strip()]
+        n = svc.remove_by_ids(ids)
+        print(f"Removed {n} job(s).")
     elif args.resume:
         return _process_queue(svc, cfg)
     return 0

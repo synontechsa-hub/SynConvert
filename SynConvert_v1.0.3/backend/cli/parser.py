@@ -17,7 +17,9 @@ def build_parser() -> argparse.ArgumentParser:
     p_queue = sub.add_parser("queue", help="Manage the job queue")
     p_queue.add_argument("--resume", action="store_true", help="Process pending jobs in the queue")
     p_queue.add_argument("--clear-done", action="store_true", help="Remove completed/skipped jobs")
+    p_queue.add_argument("--clear-all", action="store_true", help="Remove all non-pending jobs")
     p_queue.add_argument("--reset-failed", action="store_true", help="Reset failed jobs to pending")
+    p_queue.add_argument("--remove", help="Remove jobs by comma-separated IDs")
 
     # -- scan --
     p_scan = sub.add_parser("scan", help="Scan a directory and list video files")

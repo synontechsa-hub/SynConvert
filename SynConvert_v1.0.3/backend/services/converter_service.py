@@ -1,82 +1,153 @@
 import time
 from pathlib import Path
-from typing import Optional, List
+from typing import List
 
 from backend.core.engine import FFmpegEngine
 from backend.core.exceptions import ConversionError, DiskFullError
 from backend.models.job import Job, JobStatus
-from backend.models.hardware import EncoderInfo
+from backend.models.hardware import EncoderInfo, EncoderBackend
 from backend.presets import Preset
 from backend.utils.logger import SynLogger
 
+
 class ConverterService:
-    """High-level service for orchestrating video conversions."""
+    """High-level service for orchestrating video conversions.
+    
+    Uses FFmpegEngine for subprocess management and builds full FFmpeg
+    commands with proper stream mapping, subtitle/chapter passthrough,
+    and no-upscale guards.
+    """
 
     def __init__(self, engine: FFmpegEngine, logger: SynLogger):
         self.engine = engine
         self.logger = logger
 
     def process_job(
-        self, 
-        job: Job, 
-        preset: Preset, 
+        self,
+        job: Job,
+        preset: Preset,
         encoder: EncoderInfo,
-        skip_existing: bool = True
+        skip_existing: bool = True,
+        max_retries: int = 1,
     ) -> bool:
-        """Process a single conversion job."""
+        """Process a single conversion job with retry support."""
         start_time = time.monotonic()
-        
-        # 1. Skip if exists
-        if skip_existing and Path(job.output).exists():
-            self.logger.info(f"Skipping existing file: {Path(job.output).name}")
+
+        # 1. Skip if output exists
+        output_path = Path(job.output)
+        if skip_existing and output_path.exists():
+            self.logger.info(f"Skipping (exists): {output_path.name}")
             return True
 
-        # 2. Build arguments
-        args = self._build_args(job, preset, encoder)
-        
-        # 3. Run Engine
-        try:
-            self.logger.info(f"Using encoder: {encoder.video_encoder}")
-            success = self.engine.run(args)
-            
-            if success:
-                self.logger.file_success(
-                    job.source, job.output, preset.name, 
-                    encoder.video_encoder, start_time
-                )
-                return True
-            else:
-                self.logger.file_failed(
-                    job.source, job.output, preset.name,
-                    encoder.video_encoder, start_time, "FFmpeg returned non-zero"
-                )
-                return False
-                
-        except DiskFullError as exc:
-            self.logger.error(str(exc))
-            raise
-        except Exception as exc:
-            self.logger.file_failed(
-                job.source, job.output, preset.name,
-                encoder.video_encoder, start_time, str(exc)
-            )
-            return False
+        # 2. Ensure output directory exists
+        output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    def _build_args(self, job: Job, preset: Preset, encoder: EncoderInfo) -> List[str]:
-        """Build FFmpeg command line arguments based on preset and encoder."""
+        # 3. Build command
+        args = self._build_ffmpeg_args(job, preset, encoder)
+
+        # 4. Run with retries
+        attempts = 0
+        while attempts <= max_retries:
+            if attempts > 0:
+                self.logger.info(f"Retrying ({attempts}/{max_retries})...")
+
+            try:
+                success = self.engine.run(args)
+
+                if success:
+                    self.logger.file_success(
+                        job.source, job.output, preset.name,
+                        encoder.video_encoder, start_time,
+                    )
+                    return True
+
+            except DiskFullError:
+                # Clean up partial output
+                if output_path.exists():
+                    output_path.unlink()
+                raise
+
+            except Exception as exc:
+                self.logger.error(f"Engine error: {exc}")
+
+            attempts += 1
+
+        # All attempts exhausted
+        self.logger.file_failed(
+            job.source, job.output, preset.name,
+            encoder.video_encoder, start_time,
+            "FFmpeg conversion failed after all retries",
+        )
+        # Remove partial output on failure
+        if output_path.exists():
+            output_path.unlink()
+        return False
+
+    def _build_ffmpeg_args(
+        self, job: Job, preset: Preset, encoder: EncoderInfo
+    ) -> List[str]:
+        """Build full FFmpeg arguments with proper stream mapping.
+        
+        Rules:
+          - Video: re-encoded, downscaled only (never upscaled)
+          - Audio: ALL tracks preserved, re-encoded to AAC
+          - Subtitles: ALL tracks stream-copied
+          - Chapters: passed through
+        """
+        # Scale filter: fit within target while preserving aspect ratio.
+        # min(target, input) prevents upscaling.
+        scale = (
+            f"scale=w='min({preset.width},iw)':h='min({preset.height},ih)':"
+            f"force_original_aspect_ratio=decrease"
+        )
+
         args = ["-hide_banner", "-y", "-i", job.source]
-        
-        # Video settings
-        args += ["-c:v", encoder.video_encoder]
-        args += ["-vf", f"scale={preset.width}:{preset.height}"]
-        
-        if encoder.is_hardware:
-            args += ["-b:v", preset.gpu_bitrate]
-        else:
-            args += ["-crf", str(preset.cpu_crf), "-preset", "veryfast"]
-            
-        # Audio settings (passthrough for speed)
-        args += ["-c:a", "copy"]
-        
-        args.append(job.output)
+
+        # --- Video stream ---
+        args += ["-map", "0:v:0?"]  # First video stream (if present)
+
+        if encoder.backend == EncoderBackend.NVENC:
+            args += [
+                "-c:v", encoder.video_encoder,
+                "-vf", scale,
+                "-b:v", preset.gpu_bitrate,
+                "-maxrate", preset.gpu_maxrate,
+                "-bufsize", preset.gpu_bufsize,
+                "-preset", "p4",
+                "-rc", "vbr",
+                "-cq", "23",
+            ]
+        elif encoder.backend == EncoderBackend.QSV:
+            args += [
+                "-c:v", encoder.video_encoder,
+                "-vf", scale,
+                "-b:v", preset.gpu_bitrate,
+                "-maxrate", preset.gpu_maxrate,
+                "-bufsize", preset.gpu_bufsize,
+                "-preset", "fast",
+            ]
+        else:  # CPU (libx264)
+            args += [
+                "-c:v", encoder.video_encoder,
+                "-vf", scale,
+                "-crf", str(preset.cpu_crf),
+                "-preset", preset.cpu_preset,
+            ]
+
+        # --- Audio: map ALL tracks, re-encode to AAC ---
+        args += ["-map", "0:a"]
+        args += ["-c:a", preset.audio_codec]
+        args += ["-b:a", preset.audio_bitrate]
+
+        # --- Subtitles: map ALL tracks, stream copy ---
+        args += ["-map", "0:s?"]  # '?' = don't fail if none
+        args += ["-c:s", "copy"]
+
+        # --- Chapters: pass through ---
+        args += ["-map_chapters", "0"]
+
+        # --- Output format ---
+        args += ["-f", "matroska"]
+        args += [job.output]
+
         return args

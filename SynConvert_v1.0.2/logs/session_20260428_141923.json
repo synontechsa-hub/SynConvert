@@ -60,6 +60,16 @@
       "duration_seconds": 686.1680941999948,
       "error": null,
       "timestamp": "2026-04-28T13:22:55.095035+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 07 (BD 1080p) [E33BE8CF].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E07 - Uma Musume Pretty Derby.mkv",
+      "preset": "720p_mobile",
+      "encoder": "Intel QuickSync (GPU)",
+      "status": "success",
+      "duration_seconds": 627.3239411999966,
+      "error": null,
+      "timestamp": "2026-04-28T13:33:22.492508+00:00"
     }
   ]
 }

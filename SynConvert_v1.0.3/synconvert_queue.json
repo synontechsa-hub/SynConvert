@@ -1,50 +1,5 @@
 [
   {
-    "id": "1e1162d7-e6f9-47ac-b0a7-4c82379f667a",
-    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 01 (BD 1080p) [761E3F3E].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E01 - Uma Musume Pretty Derby.mkv",
-    "preset": "720p_mobile",
-    "status": "done",
-    "error": null,
-    "attempts": 2
-  },
-  {
-    "id": "ba0d2896-9d00-499e-817c-b8ba29b94ca5",
-    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 02 (BD 1080p) [A2A3156F].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E02 - Uma Musume Pretty Derby.mkv",
-    "preset": "720p_mobile",
-    "status": "done",
-    "error": null,
-    "attempts": 1
-  },
-  {
-    "id": "2dc51d06-13ac-45b5-a178-199d78e39bac",
-    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 03 (BD 1080p) [2A012883].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E03 - Uma Musume Pretty Derby.mkv",
-    "preset": "720p_mobile",
-    "status": "done",
-    "error": null,
-    "attempts": 1
-  },
-  {
-    "id": "5adac1e7-c32c-4117-9c5e-d5d8d4815974",
-    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 04 (BD 1080p) [C85795F8].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E04 - Uma Musume Pretty Derby.mkv",
-    "preset": "720p_mobile",
-    "status": "done",
-    "error": null,
-    "attempts": 1
-  },
-  {
-    "id": "c009310b-1396-447c-a584-68fc42a3c683",
-    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 05 (BD 1080p) [BE60BF96].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E05 - Uma Musume Pretty Derby.mkv",
-    "preset": "720p_mobile",
-    "status": "done",
-    "error": null,
-    "attempts": 1
-  },
-  {
     "id": "72ed4942-ce61-46f2-939c-f5f93ed8255d",
     "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 06 (BD 1080p) [42F4C024].mkv",
     "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E06 - Uma Musume Pretty Derby.mkv",

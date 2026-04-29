@@ -58,7 +58,7 @@
     "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 07 (BD 1080p) [E33BE8CF].mkv",
     "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Converted\\Season 1\\S01E07 - Uma Musume Pretty Derby.mkv",
     "preset": "720p_mobile",
-    "status": "in_progress",
+    "status": "done",
     "error": null,
     "attempts": 1
   },
@@ -69,7 +69,7 @@
     "preset": "720p_mobile",
     "status": "pending",
     "error": null,
-    "attempts": 0
+    "attempts": 1
   },
   {
     "id": "7d3291d1-376a-4e27-b6f2-5756090b2e01",
