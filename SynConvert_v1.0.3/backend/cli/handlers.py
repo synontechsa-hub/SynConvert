@@ -138,11 +138,29 @@ def handle_convert(args: argparse.Namespace) -> int:
     return _process_queue(q_svc, cfg)
 
 def _process_queue(q_svc: QueueService, cfg) -> int:
+    import sys
+    import threading
+    import os
+    
     hw_svc = HardwareService()
     encoder = hw_svc.detect_best_encoder(force=cfg.force_encoder)
     
     logger = SynLogger(cfg.log_dir)
     engine = FFmpegEngine(hw_svc._ffmpeg)
+    
+    # Watchdog to kill FFmpeg if parent (Flutter) dies and closes stdin
+    def _watchdog():
+        try:
+            sys.stdin.read()
+        except Exception:
+            pass
+        logger.error("Parent process died! Terminating FFmpeg...")
+        engine.stop()
+        os._exit(1)
+        
+    if not sys.stdin.isatty():
+        threading.Thread(target=_watchdog, daemon=True).start()
+
     converter = ConverterService(engine, logger)
     
     pending = q_svc.get_pending()
