@@ -181,20 +181,28 @@ class BackendBridge {
       workingDirectory: _backendRoot,
       environment: _pythonEnv,
     );
-    final process = _activeProcess!;
+    
+    final process = _activeProcess;
+    if (process == null) {
+      throw Exception('Failed to start resume process.');
+    }
+    
     final controller = StreamController<String>();
 
     process.stdout
         .transform(Utf8Decoder(allowMalformed: true))
         .transform(const LineSplitter())
-        .listen(controller.add);
+        .listen((line) => controller.add(line));
 
     process.stderr
         .transform(Utf8Decoder(allowMalformed: true))
         .transform(const LineSplitter())
-        .listen(controller.add);
+        .listen((line) => controller.add(line));
 
-    process.exitCode.then((_) => controller.close());
+    process.exitCode.then((_) {
+      if (!controller.isClosed) controller.close();
+    });
+
     yield* controller.stream;
   }
 
@@ -255,20 +263,27 @@ class BackendBridge {
       environment: _pythonEnv,
     );
     
-    final process = _activeProcess!;
+    final process = _activeProcess;
+    if (process == null) {
+      throw Exception('Failed to start backend process.');
+    }
+    
     final controller = StreamController<String>();
 
     process.stdout
         .transform(Utf8Decoder(allowMalformed: true))
         .transform(const LineSplitter())
-        .listen(controller.add);
+        .listen((line) => controller.add(line));
 
     process.stderr
         .transform(Utf8Decoder(allowMalformed: true))
         .transform(const LineSplitter())
-        .listen(controller.add);
+        .listen((line) => controller.add(line));
 
-    process.exitCode.then((_) => controller.close());
+    process.exitCode.then((_) {
+      if (!controller.isClosed) controller.close();
+    });
+
     yield* controller.stream;
   }
 }

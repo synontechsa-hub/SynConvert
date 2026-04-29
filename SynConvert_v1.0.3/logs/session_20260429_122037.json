@@ -1,0 +1,15 @@
+{
+  "session_start": "2026-04-29T12:20:37.354466",
+  "records": [
+    {
+      "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 01 (BD 1080p) [761E3F3E].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E01 - Uma Musume Pretty Derby 01.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 708.0283261000004,
+      "error": null,
+      "timestamp": "2026-04-29T10:32:25.397310+00:00"
+    }
+  ]
+}

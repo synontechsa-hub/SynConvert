@@ -56,8 +56,11 @@ def handle_scan(args: argparse.Namespace) -> int:
     if args.json:
         out = [{
             "source": str(p.scan_result.source_path),
-            "output": str(p.output_path),
-            "filename": p.output_filename
+            "relative": str(p.scan_result.relative_path),
+            "output_filename": p.output_filename,
+            "season": p.season,
+            "episode": p.episode,
+            "title": p.title
         } for p in proposals]
         print(json.dumps(out, indent=2))
     else:
@@ -177,7 +180,12 @@ def _process_queue(q_svc: QueueService, cfg) -> int:
         try:
             preset = get_preset(job.preset)
             success = converter.process_job(job, preset, encoder, skip_existing=cfg.skip_existing)
-            q_svc.update_status(job.id, JobStatus.DONE if success else JobStatus.FAILED)
+            if success:
+                q_svc.update_status(job.id, JobStatus.DONE)
+            else:
+                # Capture the last logged error if process_job returned False
+                last_err = "FFmpeg failed (check logs for details)"
+                q_svc.update_status(job.id, JobStatus.FAILED, error=last_err)
         except Exception as exc:
             q_svc.update_status(job.id, JobStatus.FAILED, error=str(exc))
             

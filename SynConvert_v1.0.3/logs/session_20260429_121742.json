@@ -1,0 +1,135 @@
+{
+  "session_start": "2026-04-29T12:17:42.222306",
+  "records": [
+    {
+      "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 01 (BD 1080p) [761E3F3E].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E01 - Uma Musume Pretty Derby 01.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "failed",
+      "duration_seconds": 1.3041321000200696,
+      "error": "FFmpeg conversion failed after all retries",
+      "timestamp": "2026-04-29T10:17:43.535888+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 02 (BD 1080p) [A2A3156F].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E02 - Uma Musume Pretty Derby 02.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "failed",
+      "duration_seconds": 2.2115840000042226,
+      "error": "FFmpeg conversion failed after all retries",
+      "timestamp": "2026-04-29T10:17:45.782915+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 03 (BD 1080p) [2A012883].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E03 - Uma Musume Pretty Derby 03.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "failed",
+      "duration_seconds": 0.856544300011592,
+      "error": "FFmpeg conversion failed after all retries",
+      "timestamp": "2026-04-29T10:17:46.674355+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 04 (BD 1080p) [C85795F8].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E04 - Uma Musume Pretty Derby 04.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "failed",
+      "duration_seconds": 1.522060200019041,
+      "error": "FFmpeg conversion failed after all retries",
+      "timestamp": "2026-04-29T10:17:48.224376+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 05 (BD 1080p) [BE60BF96].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E05 - Uma Musume Pretty Derby 05.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "failed",
+      "duration_seconds": 0.7563773000147194,
+      "error": "FFmpeg conversion failed after all retries",
+      "timestamp": "2026-04-29T10:17:49.015988+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 06 (BD 1080p) [42F4C024].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E06 - Uma Musume Pretty Derby 06.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "failed",
+      "duration_seconds": 0.865050299995346,
+      "error": "FFmpeg conversion failed after all retries",
+      "timestamp": "2026-04-29T10:17:49.911046+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 07 (BD 1080p) [E33BE8CF].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E07 - Uma Musume Pretty Derby 07.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "failed",
+      "duration_seconds": 0.7830463999998756,
+      "error": "FFmpeg conversion failed after all retries",
+      "timestamp": "2026-04-29T10:17:50.721340+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 08 (BD 1080p) [90BF3A01].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E08 - Uma Musume Pretty Derby 08.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "failed",
+      "duration_seconds": 0.7626349000202026,
+      "error": "FFmpeg conversion failed after all retries",
+      "timestamp": "2026-04-29T10:17:51.510419+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 09 (BD 1080p) [A26ABDD9].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E09 - Uma Musume Pretty Derby 09.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "failed",
+      "duration_seconds": 0.8338471000024583,
+      "error": "FFmpeg conversion failed after all retries",
+      "timestamp": "2026-04-29T10:17:52.376212+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 10 (BD 1080p) [AC0FD709].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E10 - Uma Musume Pretty Derby 10.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "failed",
+      "duration_seconds": 0.8021863000176381,
+      "error": "FFmpeg conversion failed after all retries",
+      "timestamp": "2026-04-29T10:17:53.210261+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 11 (BD 1080p) [45FD3EE7].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E11 - Uma Musume Pretty Derby 11.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "failed",
+      "duration_seconds": 0.7049693000153638,
+      "error": "FFmpeg conversion failed after all retries",
+      "timestamp": "2026-04-29T10:17:53.946634+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 12 (BD 1080p) [61B3CF30].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E12 - Uma Musume Pretty Derby 12.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "failed",
+      "duration_seconds": 0.9466878999955952,
+      "error": "FFmpeg conversion failed after all retries",
+      "timestamp": "2026-04-29T10:17:54.923565+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 13 (BD 1080p) [1401A473].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E13 - Uma Musume Pretty Derby 13.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "failed",
+      "duration_seconds": 0.7209835999819916,
+      "error": "FFmpeg conversion failed after all retries",
+      "timestamp": "2026-04-29T10:17:55.675797+00:00"
+    }
+  ]
+}

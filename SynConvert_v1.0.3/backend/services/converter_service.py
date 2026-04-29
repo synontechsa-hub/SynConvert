@@ -95,10 +95,10 @@ class ConverterService:
           - Chapters: passed through
         """
         # Scale filter: fit within target while preserving aspect ratio.
-        # min(target, input) prevents upscaling.
+        # force_divisible_by=2 is CRITICAL for NVENC/QSV hardware encoders.
         scale = (
             f"scale=w='min({preset.width},iw)':h='min({preset.height},ih)':"
-            f"force_original_aspect_ratio=decrease"
+            f"force_original_aspect_ratio=decrease,format=yuv420p"
         )
 
         args = ["-hide_banner", "-y", "-i", job.source]
@@ -109,7 +109,7 @@ class ConverterService:
         if encoder.backend == EncoderBackend.NVENC:
             args += [
                 "-c:v", encoder.video_encoder,
-                "-vf", scale,
+                "-vf", f"{scale},pad='ceil(iw/2)*2:ceil(ih/2)*2'",
                 "-b:v", preset.gpu_bitrate,
                 "-maxrate", preset.gpu_maxrate,
                 "-bufsize", preset.gpu_bufsize,
@@ -120,7 +120,7 @@ class ConverterService:
         elif encoder.backend == EncoderBackend.QSV:
             args += [
                 "-c:v", encoder.video_encoder,
-                "-vf", scale,
+                "-vf", f"{scale},pad='ceil(iw/2)*2:ceil(ih/2)*2'",
                 "-b:v", preset.gpu_bitrate,
                 "-maxrate", preset.gpu_maxrate,
                 "-bufsize", preset.gpu_bufsize,
@@ -134,13 +134,13 @@ class ConverterService:
                 "-preset", preset.cpu_preset,
             ]
 
-        # --- Audio: map ALL tracks, re-encode to AAC ---
-        args += ["-map", "0:a"]
+        # --- Audio: map ALL tracks (if present), re-encode to AAC ---
+        args += ["-map", "0:a?"]
         args += ["-c:a", preset.audio_codec]
         args += ["-b:a", preset.audio_bitrate]
 
-        # --- Subtitles: map ALL tracks, stream copy ---
-        args += ["-map", "0:s?"]  # '?' = don't fail if none
+        # --- Subtitles: map ALL tracks (if present), stream copy ---
+        args += ["-map", "0:s?"]
         args += ["-c:s", "copy"]
 
         # --- Chapters: pass through ---

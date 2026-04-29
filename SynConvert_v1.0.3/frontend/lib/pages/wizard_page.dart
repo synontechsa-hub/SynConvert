@@ -154,8 +154,35 @@ class _WizardPageState extends State<WizardPage> with AutomaticKeepAliveClientMi
           else if (_proposals != null)
             Expanded(child: _buildProposalTable())
           else
-            const Center(child: Text('Unexpected state')),
+            _buildReadyToScanView(),
         ],
+      ),
+    );
+  }
+
+  Widget _buildReadyToScanView() {
+    return Expanded(
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.search_off_rounded,
+              size: 64,
+              color: Colors.white.withValues(alpha: 0.1),
+            ),
+            const SizedBox(height: 16),
+            const Text(
+              'No files scanned yet',
+              style: TextStyle(color: Colors.white70, fontSize: 16),
+            ),
+            const SizedBox(height: 24),
+            ElevatedButton(
+              onPressed: _runScan,
+              child: const Text('Retry Scan'),
+            ),
+          ],
+        ),
       ),
     );
   }

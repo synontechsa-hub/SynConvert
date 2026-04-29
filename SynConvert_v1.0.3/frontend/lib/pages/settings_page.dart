@@ -50,9 +50,19 @@ class _SettingsPageState extends State<SettingsPage>
         final parts = preset.split('_');
         if (parts.length == 2) {
           _selectedRes = parts[0];
-          _selectedQuality = parts[1];
+          
+          // Map legacy/alias quality names to the new dropdown options
+          final rawQuality = parts[1];
+          if (rawQuality == 'mobile') {
+            _selectedQuality = 'medium';
+          } else if (rawQuality == 'saver') {
+            _selectedQuality = 'low';
+          } else if (['high', 'medium', 'low'].contains(rawQuality)) {
+            _selectedQuality = rawQuality;
+          } else {
+            _selectedQuality = 'medium';
+          }
         } else {
-          // Handle legacy or unknown formats
           _selectedRes = '720p';
           _selectedQuality = 'medium';
         }
