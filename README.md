@@ -1,167 +1,122 @@
 # SynConvert
 
-Proprietary software - All Rights Reserved.
-No part of this project may be copied, reused, or redistributed without explicit permission.
+![SynConvert Logo](https://github.com/synontechsa-hub/SynConvert/blob/main/assets/synconvert-logo.png)
 
-## Overview
+**Offline batch video transcoder** — Fast. Compatible. Reliable.
 
-SynConvert is an offline-first batch video transcoder built by SynonTech for preparing media libraries for mobile playback.
+Built for anime and TV show collectors who want clean, mobile-optimized MP4/MKV files with smart naming, hardware acceleration, and a smooth desktop experience.
 
-It is designed to process full folders of video files, preserve audio and subtitle streams, mirror directory structure, and produce clean, consistently named output files using FFmpeg.
+---
 
-Current version 1.0.0 is focused on dependable local conversion workflows, hardware-aware encoding, persistent job tracking, and practical review controls before conversion begins.
+## ✨ Features
 
-## Core Features
+- **Hardware Acceleration** — Automatic detection of NVIDIA NVENC and Intel Quick Sync, with CPU fallback
+- **Smart Naming** — Automatically detects season/episode and generates clean filenames (`S01E03 - Title.mkv`)
+- **Review Mode** — Preview and edit proposed filenames before conversion
+- **Persistent Queue** — Save your queue and resume later
+- **Parallel Processing** — Convert multiple files simultaneously (configurable)
+- **Full Stream Preservation** — Audio tracks, subtitles, and chapters are kept
+- **Beautiful Flutter Desktop UI** — Modern, responsive interface (Windows focus)
+- **Themes** — New in v1.0.6
+- **Configurable Presets** — Optimized for mobile/tablet storage vs quality
 
-- Batch conversion for full seasons or library folders
-- Mobile-optimized H.264 output with configurable presets
-- Preservation of multiple audio tracks
-- Preservation of subtitle tracks as soft subs
-- Mirrored output folder structure
-- Automatic encoder selection for NVIDIA NVENC, Intel Quick Sync, or CPU fallback
-- Review mode for checking and editing proposed filenames before conversion
-- Persistent queue behavior for interrupted sessions
-- Structured JSON logging for conversion sessions
-- Fully offline operation with no cloud or API dependency
+---
 
-## Project Structure
+## 📊 Available Presets
 
-```text
-SynConvert/
-|-- backend/            # Core application package
-|   |-- config.py       # Global settings
-|   |-- scanner.py      # Folder scanning and media discovery
-|   |-- presets.py      # Encoding preset definitions
-|   |-- hardware.py     # Encoder and hardware detection
-|   |-- naming.py       # Output naming and review flow
-|   |-- converter.py    # FFmpeg execution pipeline
-|   |-- queue.py        # Persistent conversion queue handling
-|   |-- logger.py       # Console and JSON logging
-|   `-- main.py         # CLI entry point
-|-- tests/              # Unit tests
-|-- pyproject.toml      # Package metadata and CLI entry point
-|-- requirements.txt    # Base dependency list
-|-- README.md           # Project overview
-`-- LICENSE.txt         # Proprietary source license
-```
+| Preset | Resolution | Target Use Case | Quality / Size |
+|---|---|---|---|
+| `720p_mobile` | 1280×720 | Phones & Tablets (Recommended) | Balanced |
+| `480p_saver` | 854×480 | Maximum storage saving | Smallest |
+| `1080p_high` | 1920×1080 | Best quality | Largest |
 
-## Setup Instructions
+*(More presets available via CLI)*
 
-### Prerequisites
+---
 
-- Python 3.11 or newer
-- FFmpeg is handled automatically through `static-ffmpeg`
+## 🚀 Quick Start
 
-### Installation
+### 1. Installation
 
 ```bash
+# Clone the repo
 git clone https://github.com/synontechsa-hub/SynConvert.git
 cd SynConvert
+
+# Install Python backend
 python -m venv .venv
-.venv\Scripts\activate
+.venv\Scripts\activate    # Windows
 pip install -e .
+
+# Launch the app
+python launch.py
 ```
 
-For development tooling and tests:
+### 2. Basic Usage (CLI)
 
 ```bash
-pip install -e ".[dev]"
-```
+# Scan a folder
+synconvert scan --input "F:\Anime\Show Name"
 
-## Usage
+# Convert with default settings
+synconvert convert --input "F:\Anime\Show Name" --output "F:\Converted"
 
-### Scan a folder without converting
-
-```bash
-synconvert scan --input "D:/Anime/Failure Frame"
-```
-
-### Convert a folder
-
-```bash
-synconvert convert --input "D:/Anime/Failure Frame" --output "D:/Mobile/Failure Frame"
-```
-
-### Convert without review mode
-
-```bash
-synconvert convert --input "D:/Anime/Dandadan" --output "D:/Mobile/Dandadan" --no-review
-```
-
-### Use the storage saver preset
-
-```bash
-synconvert convert --input "D:/Anime/Show" --output "D:/Mobile/Show" --preset 480p_saver
-```
-
-### Use a custom naming template
-
-```bash
-synconvert convert --input "D:/Anime/Show" --output "D:/Mobile/Show" --template "S{S:02d}E{E:02d} - {title}"
-```
-
-Available template variables:
-
-- `{S}` for season number
-- `{E}` for episode number
-- `{title}` for episode title, with fallback naming when needed
-
-### Check queue status
-
-```bash
+# Check queue status
 synconvert status
 ```
 
-### List presets
+---
 
-```bash
-synconvert presets
+## 🖥️ Screenshots
+
+*(Add your screenshots here — especially the Wizard / New Job page and Queue page)*
+
+| New Job Wizard | Queue Management | Settings Panel |
+|---|---|---|
+| *(screenshot)* | *(screenshot)* | *(screenshot)* |
+
+---
+
+## 📋 What's New in v1.0.6
+
+- Themes support added to the Flutter UI
+- Fixed hardcoded numbers on the Dashboard
+- Various small bug fixes and stability improvements
+
+---
+
+## 🗂️ Project Structure
+
+```
+SynConvert/
+├── backend/     # Python core (FFmpeg engine, queue, naming, hardware detection)
+├── frontend/    # Flutter desktop application
+└── launch.py    # Convenient launcher for the full app
 ```
 
-## Presets
+---
 
-- `720p_mobile`: default balanced preset for quality and size
-- `480p_saver`: lower-resolution preset for storage savings
+## 🛠️ Tech Stack
 
-Both presets currently target:
+| Layer | Technology |
+|---|---|
+| Backend | Python + FFmpeg (with static-ffmpeg) |
+| Frontend | Flutter (Desktop) |
+| UI State | Provider |
+| Hardware | NVENC, Quick Sync, libx264 fallback |
 
-- MKV container output
-- H.264 video
-- AAC audio
+---
 
-## Hardware Acceleration
+## 🤝 Contributing
 
-SynConvert automatically prefers the best available encoder in this order:
+Contributions are welcome! Feel free to open issues or submit pull requests.
 
-1. `h264_nvenc`
-2. `h264_qsv`
-3. `libx264`
+---
 
-A specific encoder can also be forced manually:
+## 📄 License
 
-```bash
-synconvert convert --input ... --output ... --encoder libx264
-```
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
-## Output Rules
+---
 
-- Source files are never modified
-- Output is always written to a separate target directory
-- Input directory structure is mirrored in the output
-- Default naming follows the `S01E03 - Episode Title.mkv` pattern
-
-## Testing
-
-```bash
-pytest
-```
-
-## License
-
-This project is proprietary and confidential.
-See [LICENSE.txt](LICENSE.txt) for the full SynonTech Proprietary Source License.
-
-## Contact / Ownership
-
-Owner: Syn (SynonTech)
-Repository: SynConvert GitHub
+*Made with ❤️ for offline media enthusiasts*

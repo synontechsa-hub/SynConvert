@@ -1,0 +1,65 @@
+{
+  "session_start": "2026-04-30T11:52:03.064150",
+  "records": [
+    {
+      "source": "F:\\Anime\\Even Given the Worthless Appraiser Class, I'm Actually the Strongest\\[Ironclad] Fugukan - ED [BD.1080p.AV1].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E01 - Fugukan Ed.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 8.201515699999959,
+      "error": null,
+      "timestamp": "2026-04-30T09:52:11.279203+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Even Given the Worthless Appraiser Class, I'm Actually the Strongest\\[Ironclad] Fugukan - OP [BD.1080p.AV1].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E02 - Fugukan Op.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 7.485284699999966,
+      "error": null,
+      "timestamp": "2026-04-30T09:52:18.802068+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Even Given the Worthless Appraiser Class, I'm Actually the Strongest\\[Ironclad] Fugukan - S01E01 [BD.1080p.AV1].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E01 - Fugukan S01E01.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 129.5781321999999,
+      "error": null,
+      "timestamp": "2026-04-30T09:54:28.413678+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Even Given the Worthless Appraiser Class, I'm Actually the Strongest\\[Ironclad] Fugukan - S01E02 [BD.1080p.AV1].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E02 - Fugukan S01E02.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 73.52393479999989,
+      "error": null,
+      "timestamp": "2026-04-30T09:55:41.972287+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Even Given the Worthless Appraiser Class, I'm Actually the Strongest\\[Ironclad] Fugukan - S01E03 [BD.1080p.AV1].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E03 - Fugukan S01E03.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 67.74507999999992,
+      "error": null,
+      "timestamp": "2026-04-30T09:56:49.748466+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Even Given the Worthless Appraiser Class, I'm Actually the Strongest\\[Ironclad] Fugukan - S01E04 [BD.1080p.AV1].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E04 - Fugukan S01E04.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 145.94152099999997,
+      "error": null,
+      "timestamp": "2026-04-30T09:59:15.720749+00:00"
+    }
+  ]
+}

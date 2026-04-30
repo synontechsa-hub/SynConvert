@@ -1,0 +1,125 @@
+{
+  "session_start": "2026-04-30T12:14:43.062054",
+  "records": [
+    {
+      "source": "F:\\Anime\\I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability\\[Judas] Dainanaoji - S02E01v2.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E01 - Dainanaoji S02E01V2.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 105.27788270000019,
+      "error": null,
+      "timestamp": "2026-04-30T10:16:28.356485+00:00"
+    },
+    {
+      "source": "F:\\Anime\\I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability\\[Judas] Dainanaoji - S02E02v2.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E02 - Dainanaoji S02E02V2.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 123.57823869999993,
+      "error": null,
+      "timestamp": "2026-04-30T10:18:31.966978+00:00"
+    },
+    {
+      "source": "F:\\Anime\\I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability\\[Judas] Dainanaoji - S02E03v2.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E03 - Dainanaoji S02E03V2.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 128.16415899999993,
+      "error": null,
+      "timestamp": "2026-04-30T10:20:40.158831+00:00"
+    },
+    {
+      "source": "F:\\Anime\\I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability\\[Judas] Dainanaoji - S02E04v2.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E04 - Dainanaoji S02E04V2.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 137.94751590000033,
+      "error": null,
+      "timestamp": "2026-04-30T10:22:58.137331+00:00"
+    },
+    {
+      "source": "F:\\Anime\\I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability\\[Judas] Dainanaoji - S02E05v2.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E05 - Dainanaoji S02E05V2.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 119.76755899999989,
+      "error": null,
+      "timestamp": "2026-04-30T10:24:57.936032+00:00"
+    },
+    {
+      "source": "F:\\Anime\\I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability\\[Judas] Dainanaoji - S02E06v2.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E06 - Dainanaoji S02E06V2.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 132.18483119999973,
+      "error": null,
+      "timestamp": "2026-04-30T10:27:10.156802+00:00"
+    },
+    {
+      "source": "F:\\Anime\\I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability\\[Judas] Dainanaoji - S02E07v2.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E07 - Dainanaoji S02E07V2.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 140.1283613999999,
+      "error": null,
+      "timestamp": "2026-04-30T10:29:30.316028+00:00"
+    },
+    {
+      "source": "F:\\Anime\\I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability\\[Judas] Dainanaoji - S02E08v2.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E08 - Dainanaoji S02E08V2.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 160.4256719,
+      "error": null,
+      "timestamp": "2026-04-30T10:32:10.774549+00:00"
+    },
+    {
+      "source": "F:\\Anime\\I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability\\[Judas] Dainanaoji - S02E09v2.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E09 - Dainanaoji S02E09V2.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 167.11721259999968,
+      "error": null,
+      "timestamp": "2026-04-30T10:34:57.930984+00:00"
+    },
+    {
+      "source": "F:\\Anime\\I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability\\[Judas] Dainanaoji - S02E10v2.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E10 - Dainanaoji S02E10V2.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 148.34005500000012,
+      "error": null,
+      "timestamp": "2026-04-30T10:37:26.307659+00:00"
+    },
+    {
+      "source": "F:\\Anime\\I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability\\[Judas] Dainanaoji - S02E11v2.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E11 - Dainanaoji S02E11V2.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 167.74109150000004,
+      "error": null,
+      "timestamp": "2026-04-30T10:40:14.080977+00:00"
+    },
+    {
+      "source": "F:\\Anime\\I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability\\[Judas] Dainanaoji - S02E12v2.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E12 - Dainanaoji S02E12V2.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 87.2659362000004,
+      "error": null,
+      "timestamp": "2026-04-30T10:41:41.387079+00:00"
+    }
+  ]
+}

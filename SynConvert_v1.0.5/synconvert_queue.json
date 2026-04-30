@@ -1,116 +1,107 @@
 [
   {
-    "id": "30751c26-078d-4746-8cf1-8661323bbd23",
-    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 01 (BD 1080p) [9F9CF4B9].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E01 - Uma Musume Pretty Derby S2 01.mkv",
+    "id": "42460033-47d1-44be-961a-48c0d6283d78",
+    "source": "F:\\Anime\\As a Reincarnated Aristocrat, I`ll Use My Appraisal Skill to Rise in the World\\Season 2\\[Judas] Tensei Kizoku - S02E01.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\Season 2\\S02E01 - Tensei Kizoku S02E01.mkv",
     "preset": "720p_medium",
-    "status": "done",
+    "status": "in_progress",
     "error": null,
     "attempts": 1
   },
   {
-    "id": "4a8a4345-70f6-4749-a9d8-d5fb5be0668a",
-    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 02 (BD 1080p) [C0A7DC1B].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E02 - Uma Musume Pretty Derby S2 02.mkv",
-    "preset": "720p_medium",
-    "status": "done",
-    "error": null,
-    "attempts": 1
-  },
-  {
-    "id": "3e45076c-1ae3-4879-b9f1-8f76005d44d8",
-    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 03 (BD 1080p) [B0A24D76].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E03 - Uma Musume Pretty Derby S2 03.mkv",
-    "preset": "720p_medium",
-    "status": "done",
-    "error": null,
-    "attempts": 1
-  },
-  {
-    "id": "2ef6f284-e7a3-4581-aaa4-b3e1619871af",
-    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 04 (BD 1080p) [EBD6CA5C].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E04 - Uma Musume Pretty Derby S2 04.mkv",
-    "preset": "720p_medium",
-    "status": "done",
-    "error": null,
-    "attempts": 1
-  },
-  {
-    "id": "cdb79411-f734-4fdd-b176-7a86cc095eff",
-    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 05 (BD 1080p) [5DF5F7D7].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E05 - Uma Musume Pretty Derby S2 05.mkv",
-    "preset": "720p_medium",
-    "status": "failed",
-    "error": "[Errno 22] Invalid argument",
-    "attempts": 1
-  },
-  {
-    "id": "cc0f9220-e8dc-4f26-b5f0-b8705afb904a",
-    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 06 (BD 1080p) [C1FA77F6].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E06 - Uma Musume Pretty Derby S2 06.mkv",
-    "preset": "720p_medium",
-    "status": "done",
-    "error": null,
-    "attempts": 1
-  },
-  {
-    "id": "fe770187-22bc-43c1-b4a3-16532163119e",
-    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 07 (BD 1080p) [5863B592].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E07 - Uma Musume Pretty Derby S2 07.mkv",
-    "preset": "720p_medium",
-    "status": "failed",
-    "error": "[Errno 22] Invalid argument",
-    "attempts": 1
-  },
-  {
-    "id": "a6159902-e74c-404c-853f-2f3496382f75",
-    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 08 (BD 1080p) [26D44F05].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E08 - Uma Musume Pretty Derby S2 08.mkv",
+    "id": "f0310777-a723-4267-8347-308c893dca25",
+    "source": "F:\\Anime\\As a Reincarnated Aristocrat, I`ll Use My Appraisal Skill to Rise in the World\\Season 2\\[Judas] Tensei Kizoku - S02E02.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\Season 2\\S02E02 - Tensei Kizoku S02E02.mkv",
     "preset": "720p_medium",
     "status": "pending",
     "error": null,
     "attempts": 0
   },
   {
-    "id": "450e021b-be47-4438-a6e8-d5cb9d6eb718",
-    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 09 (BD 1080p) [87ED26CD].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E09 - Uma Musume Pretty Derby S2 09.mkv",
+    "id": "9ab87afd-cd6e-4772-82cf-eba1075cc4d8",
+    "source": "F:\\Anime\\As a Reincarnated Aristocrat, I`ll Use My Appraisal Skill to Rise in the World\\Season 2\\[Judas] Tensei Kizoku - S02E03.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\Season 2\\S02E03 - Tensei Kizoku S02E03.mkv",
     "preset": "720p_medium",
     "status": "pending",
     "error": null,
     "attempts": 0
   },
   {
-    "id": "1799ff9d-2580-4bfd-8d1f-4527ef319e77",
-    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 10 (BD 1080p) [C5B54315].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E10 - Uma Musume Pretty Derby S2 10.mkv",
+    "id": "c03676da-f79d-4f80-bbfc-ce1f5ae85749",
+    "source": "F:\\Anime\\As a Reincarnated Aristocrat, I`ll Use My Appraisal Skill to Rise in the World\\Season 2\\[Judas] Tensei Kizoku - S02E04.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\Season 2\\S02E04 - Tensei Kizoku S02E04.mkv",
     "preset": "720p_medium",
     "status": "pending",
     "error": null,
     "attempts": 0
   },
   {
-    "id": "af8e4a07-6d48-4873-9797-ec819dd14ff3",
-    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 11 (BD 1080p) [3F642CD5].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E11 - Uma Musume Pretty Derby S2 11.mkv",
+    "id": "e77aaa7f-3c16-42c3-9d34-4a8cd80548fc",
+    "source": "F:\\Anime\\As a Reincarnated Aristocrat, I`ll Use My Appraisal Skill to Rise in the World\\Season 2\\[Judas] Tensei Kizoku - S02E05.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\Season 2\\S02E05 - Tensei Kizoku S02E05.mkv",
     "preset": "720p_medium",
     "status": "pending",
     "error": null,
     "attempts": 0
   },
   {
-    "id": "f2d5be8b-4b48-47cd-95e9-f7ff1cfe39dc",
-    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 12 (BD 1080p) [6000063E].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E12 - Uma Musume Pretty Derby S2 12.mkv",
+    "id": "1bc08057-0efd-45b0-978d-af00903eac54",
+    "source": "F:\\Anime\\As a Reincarnated Aristocrat, I`ll Use My Appraisal Skill to Rise in the World\\Season 2\\[Judas] Tensei Kizoku - S02E06.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\Season 2\\S02E06 - Tensei Kizoku S02E06.mkv",
     "preset": "720p_medium",
     "status": "pending",
     "error": null,
     "attempts": 0
   },
   {
-    "id": "b120fb7f-68ac-486f-a925-d6299ad86e7f",
-    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 13 (BD 1080p) [D5CE4867].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E13 - Uma Musume Pretty Derby S2 13.mkv",
+    "id": "d1bbd1b8-3e7e-4597-8539-5adeab73a31b",
+    "source": "F:\\Anime\\As a Reincarnated Aristocrat, I`ll Use My Appraisal Skill to Rise in the World\\Season 2\\[Judas] Tensei Kizoku - S02E07.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\Season 2\\S02E07 - Tensei Kizoku S02E07.mkv",
+    "preset": "720p_medium",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "5a49bbff-11f7-4863-8f12-33a019d217e2",
+    "source": "F:\\Anime\\As a Reincarnated Aristocrat, I`ll Use My Appraisal Skill to Rise in the World\\Season 2\\[Judas] Tensei Kizoku - S02E08v2.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\Season 2\\S02E08 - Tensei Kizoku S02E08V2.mkv",
+    "preset": "720p_medium",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "2d662f6f-0e5f-4169-ab49-e0957cfb13d1",
+    "source": "F:\\Anime\\As a Reincarnated Aristocrat, I`ll Use My Appraisal Skill to Rise in the World\\Season 2\\[Judas] Tensei Kizoku - S02E09v2.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\Season 2\\S02E09 - Tensei Kizoku S02E09V2.mkv",
+    "preset": "720p_medium",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "1985b8d7-61b4-49d1-aca6-9630ff677156",
+    "source": "F:\\Anime\\As a Reincarnated Aristocrat, I`ll Use My Appraisal Skill to Rise in the World\\Season 2\\[Judas] Tensei Kizoku - S02E10.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\Season 2\\S02E10 - Tensei Kizoku S02E10.mkv",
+    "preset": "720p_medium",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "40f9810b-4b26-4a5e-a8b6-8e376ae73728",
+    "source": "F:\\Anime\\As a Reincarnated Aristocrat, I`ll Use My Appraisal Skill to Rise in the World\\Season 2\\[Judas] Tensei Kizoku - S02E11v2.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\Season 2\\S02E11 - Tensei Kizoku S02E11V2.mkv",
+    "preset": "720p_medium",
+    "status": "pending",
+    "error": null,
+    "attempts": 0
+  },
+  {
+    "id": "ada3470a-ac29-4b67-98b1-44376f694f41",
+    "source": "F:\\Anime\\As a Reincarnated Aristocrat, I`ll Use My Appraisal Skill to Rise in the World\\Season 2\\[Judas] Tensei Kizoku - S02E12v2.mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\Season 2\\S02E12 - Tensei Kizoku S02E12V2.mkv",
     "preset": "720p_medium",
     "status": "pending",
     "error": null,
