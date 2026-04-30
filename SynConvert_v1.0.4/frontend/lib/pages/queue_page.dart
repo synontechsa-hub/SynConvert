@@ -1,5 +1,7 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:desktop_drop/desktop_drop.dart';
 import '../backend_bridge.dart';
 
 class QueuePage extends StatefulWidget {
@@ -193,240 +195,308 @@ class _QueuePageState extends State<QueuePage> with AutomaticKeepAliveClientMixi
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    return Padding(
-      padding: const EdgeInsets.all(32.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return DropTarget(
+      onDragDone: (details) async {
+        final bridge = context.read<BackendBridge>();
+        final messenger = ScaffoldMessenger.of(context);
+        final paths = details.files
+            .map((f) => f.path)
+            .where((p) => FileSystemEntity.isFileSync(p))
+            .toList();
+        if (paths.isNotEmpty) {
+          try {
+            await bridge.addToQueue(paths);
+            _refreshQueue();
+          } catch (e) {
+            if (mounted) {
+              messenger.showSnackBar(
+                SnackBar(
+                    content: Text('Error adding to queue: $e'),
+                    backgroundColor: Colors.redAccent),
+              );
+            }
+          }
+        }
+      },
+      onDragEntered: (details) => setState(() => _isDragging = true),
+      onDragExited: (details) => setState(() => _isDragging = false),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 200),
+        decoration: BoxDecoration(
+          color: _isDragging
+              ? Colors.white.withValues(alpha: 0.05)
+              : Colors.transparent,
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(32.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Conversion Queue',
-                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                  ),
-                  Text(
-                    'Manage your background tasks and pending jobs.',
-                    style: TextStyle(color: Colors.white.withValues(alpha: 0.4), fontSize: 14),
-                  ),
-                ],
-              ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  if (_selectedIds.isNotEmpty)
-                    _buildActionButton(
-                      icon: Icons.delete_sweep_rounded,
-                      label: 'Remove Selected (${_selectedIds.length})',
-                      color: Colors.redAccent,
-                      onPressed: _removeSelected,
-                    )
-                  else ...[
-                    if (_isProcessing)
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Conversion Queue',
+                        style: Theme.of(context)
+                            .textTheme
+                            .headlineMedium
+                            ?.copyWith(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                      ),
+                      Text(
+                        'Manage your background tasks and pending jobs.',
+                        style: TextStyle(
+                            color: Colors.white.withValues(alpha: 0.4),
+                            fontSize: 14),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      if (_selectedIds.isNotEmpty)
+                        _buildActionButton(
+                          icon: Icons.delete_sweep_rounded,
+                          label: 'Remove Selected (${_selectedIds.length})',
+                          color: Colors.redAccent,
+                          onPressed: _removeSelected,
+                        )
+                      else ...[
+                        if (_isProcessing)
+                          _buildActionButton(
+                            icon: Icons.stop_rounded,
+                            label: 'Stop Processing',
+                            color: Colors.redAccent,
+                            onPressed: _stopProcessing,
+                          )
+                        else
+                          _buildActionButton(
+                            icon: Icons.play_arrow_rounded,
+                            label: 'Resume Queue',
+                            color: const Color(0xFF00D2FF),
+                            onPressed: _jobs != null &&
+                                    _jobs!.any((j) => j['status'] == 'pending')
+                                ? _resumeQueue
+                                : null,
+                          ),
+                        const SizedBox(width: 12),
+                        _buildActionButton(
+                          icon: Icons.restore_rounded,
+                          label: 'Reset Failed',
+                          color: Colors.orangeAccent,
+                          onPressed: _jobs != null &&
+                                  _jobs!.any((j) => j['status'] == 'failed')
+                              ? _resetFailed
+                              : null,
+                        ),
+                      ],
+                      const SizedBox(width: 12),
                       _buildActionButton(
-                        icon: Icons.stop_rounded,
-                        label: 'Stop Processing',
-                        color: Colors.redAccent,
-                        onPressed: _stopProcessing,
-                      )
-                    else
-                      _buildActionButton(
-                        icon: Icons.play_arrow_rounded,
-                        label: 'Resume Queue',
-                        color: const Color(0xFF00D2FF),
-                        onPressed: _jobs != null && _jobs!.any((j) => j['status'] == 'pending')
-                            ? _resumeQueue
+                        icon: Icons.cleaning_services_rounded,
+                        label: 'Clear Done',
+                        color: Colors.white24,
+                        onPressed: _jobs != null &&
+                                _jobs!.any((j) =>
+                                    j['status'] == 'done' ||
+                                    j['status'] == 'skipped')
+                            ? _clearCompleted
                             : null,
                       ),
-                    const SizedBox(width: 12),
-                    _buildActionButton(
-                      icon: Icons.restore_rounded,
-                      label: 'Reset Failed',
-                      color: Colors.orangeAccent,
-                      onPressed: _jobs != null && _jobs!.any((j) => j['status'] == 'failed')
-                          ? _resetFailed
-                          : null,
-                    ),
-                  ],
-                  const SizedBox(width: 12),
-                  _buildActionButton(
-                    icon: Icons.cleaning_services_rounded,
-                    label: 'Clear Done',
-                    color: Colors.white24,
-                    onPressed: _jobs != null && _jobs!.any((j) => j['status'] == 'done' || j['status'] == 'skipped')
-                        ? _clearCompleted
-                        : null,
-                  ),
-                  const SizedBox(width: 12),
-                  _buildActionButton(
-                    icon: Icons.history_rounded,
-                    label: 'Clear History',
-                    color: Colors.redAccent.withValues(alpha: 0.5),
-                    onPressed: _jobs != null && _jobs!.any((j) => j['status'] != 'pending' && j['status'] != 'in_progress')
-                        ? _clearAllHistory
-                        : null,
-                  ),
-                  const SizedBox(width: 12),
-                  IconButton(
-                    onPressed: _refreshQueue,
-                    icon: const Icon(Icons.refresh_rounded, color: Colors.white70),
-                    tooltip: 'Refresh Status',
+                      const SizedBox(width: 12),
+                      _buildActionButton(
+                        icon: Icons.history_rounded,
+                        label: 'Clear History',
+                        color: Colors.redAccent.withValues(alpha: 0.5),
+                        onPressed: _jobs != null &&
+                                _jobs!.any((j) =>
+                                    j['status'] != 'pending' &&
+                                    j['status'] != 'in_progress')
+                            ? _clearAllHistory
+                            : null,
+                      ),
+                      const SizedBox(width: 12),
+                      IconButton(
+                        onPressed: _refreshQueue,
+                        icon: const Icon(Icons.refresh_rounded,
+                            color: Colors.white70),
+                        tooltip: 'Refresh Status',
+                      ),
+                    ],
                   ),
                 ],
               ),
-            ],
-          ),
-          const SizedBox(height: 32),
-          if (_isLoading)
-            const Expanded(child: Center(child: CircularProgressIndicator()))
-          else if (_jobs == null || _jobs!.isEmpty)
-            Expanded(
-              child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(Icons.inbox_rounded, size: 64, color: Colors.white.withValues(alpha: 0.1)),
-                    const SizedBox(height: 16),
-                    Text(
-                      'No jobs in queue',
-                      style: TextStyle(color: Colors.white.withValues(alpha: 0.3), fontSize: 18),
-                    ),
-                  ],
-                ),
-              ),
-            )
-          else
-            Expanded(
-              child: Container(
-                decoration: BoxDecoration(
-                  color: const Color(0xFF161616),
-                  borderRadius: BorderRadius.circular(24),
-                  border: Border.all(color: Colors.white.withValues(alpha: 0.05)),
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(24),
-                  child: SingleChildScrollView(
-                    child: DataTable(
-                      headingRowColor: WidgetStateProperty.all(const Color(0xFF222222)),
-                      columns: [
-                        DataColumn(
-                          label: Checkbox(
-                            value: _jobs != null && _jobs!.isNotEmpty && _selectedIds.length == _jobs!.length,
-                            onChanged: (val) {
-                              setState(() {
-                                if (val == true) {
-                                  _selectedIds.addAll(_jobs!.map((j) => j['id'] as String));
-                                } else {
-                                  _selectedIds.clear();
-                                }
-                              });
-                            },
-                          ),
+              const SizedBox(height: 32),
+              if (_isLoading)
+                const Expanded(
+                    child: Center(child: CircularProgressIndicator()))
+              else if (_jobs == null || _jobs!.isEmpty)
+                Expanded(
+                  child: Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.inbox_rounded,
+                            size: 64,
+                            color: Colors.white.withValues(alpha: 0.1)),
+                        const SizedBox(height: 16),
+                        Text(
+                          'No jobs in queue',
+                          style: TextStyle(
+                              color: Colors.white.withValues(alpha: 0.3),
+                              fontSize: 18),
                         ),
-                        const DataColumn(label: Text('Status')),
-                        const DataColumn(label: Text('Source File')),
-                        const DataColumn(label: Text('Attempts')),
-                        const DataColumn(label: Text('Output')),
                       ],
-                      rows: _jobs!.map((job) {
-                        final id = job['id'] as String;
-                        final status = job['status'] as String;
-                        final source = job['source'] as String;
-                        final attempts = job['attempts'] ?? 0;
-                        final output = job['output'] as String;
-                        final filename = source.split('\\').last.split('/').last;
-
-                        Color statusColor = Colors.white70;
-                        IconData statusIcon = Icons.help_outline;
-
-                        switch (status) {
-                          case 'pending':
-                            statusColor = Colors.blueAccent;
-                            statusIcon = Icons.hourglass_empty_rounded;
-                            break;
-                          case 'in_progress':
-                            statusColor = Colors.orangeAccent;
-                            statusIcon = Icons.sync_rounded;
-                            break;
-                          case 'done':
-                            statusColor = const Color(0xFF2ECC71);
-                            statusIcon = Icons.check_circle_rounded;
-                            break;
-                          case 'failed':
-                            statusColor = Colors.redAccent;
-                            statusIcon = Icons.error_rounded;
-                            break;
-                          case 'skipped':
-                            statusColor = Colors.white38;
-                            statusIcon = Icons.skip_next_rounded;
-                            break;
-                        }
-
-                        return DataRow(
-                          selected: _selectedIds.contains(id),
-                          onSelectChanged: (val) {
-                            setState(() {
-                              if (val == true) {
-                                _selectedIds.add(id);
-                              } else {
-                                _selectedIds.remove(id);
-                              }
-                            });
-                          },
-                          cells: [
-                            DataCell(const SizedBox.shrink()), // Reserved for built-in checkbox
-                            DataCell(
-                              Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Icon(statusIcon, color: statusColor, size: 16),
-                                  const SizedBox(width: 8),
-                                  Text(
-                                    status.toUpperCase(),
-                                    style: TextStyle(
-                                      color: statusColor,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 10,
+                    ),
+                  ),
+                )
+              else
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF161616),
+                      borderRadius: BorderRadius.circular(24),
+                      border: Border.all(
+                          color: Colors.white.withValues(alpha: 0.05)),
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(24),
+                      child: SingleChildScrollView(
+                        child: DataTable(
+                          headingRowColor: WidgetStateProperty.all(
+                              const Color(0xFF222222)),
+                          columns: [
+                            DataColumn(
+                              label: Checkbox(
+                                value: _jobs != null &&
+                                    _jobs!.isNotEmpty &&
+                                    _selectedIds.length == _jobs!.length,
+                                onChanged: (val) {
+                                  setState(() {
+                                    if (val == true) {
+                                      _selectedIds.addAll(_jobs!
+                                          .map((j) => j['id'] as String));
+                                    } else {
+                                      _selectedIds.clear();
+                                    }
+                                  });
+                                },
+                              ),
+                            ),
+                            const DataColumn(label: Text('Status')),
+                            const DataColumn(label: Text('Source File')),
+                            const DataColumn(label: Text('Attempts')),
+                            const DataColumn(label: Text('Output')),
+                          ],
+                          rows: _jobs!.map((job) {
+                            final id = job['id'] as String;
+                            final status = job['status'] as String;
+                            final source = job['source'] as String;
+                            final attempts = job['attempts'] ?? 0;
+                            final output = job['output'] as String;
+                            final filename =
+                                source.split('\\').last.split('/').last;
+ 
+                            Color statusColor = Colors.white70;
+                            IconData statusIcon = Icons.help_outline;
+ 
+                            switch (status) {
+                              case 'pending':
+                                statusColor = Colors.blueAccent;
+                                statusIcon = Icons.hourglass_empty_rounded;
+                                break;
+                              case 'in_progress':
+                                statusColor = Colors.orangeAccent;
+                                statusIcon = Icons.sync_rounded;
+                                break;
+                              case 'done':
+                                statusColor = const Color(0xFF2ECC71);
+                                statusIcon = Icons.check_circle_rounded;
+                                break;
+                              case 'failed':
+                                statusColor = Colors.redAccent;
+                                statusIcon = Icons.error_rounded;
+                                break;
+                              case 'skipped':
+                                statusColor = Colors.white38;
+                                statusIcon = Icons.skip_next_rounded;
+                                break;
+                            }
+ 
+                            return DataRow(
+                              selected: _selectedIds.contains(id),
+                              onSelectChanged: (val) {
+                                setState(() {
+                                  if (val == true) {
+                                    _selectedIds.add(id);
+                                  } else {
+                                    _selectedIds.remove(id);
+                                  }
+                                });
+                              },
+                              cells: [
+                                DataCell(const SizedBox
+                                    .shrink()), // Reserved for built-in checkbox
+                                DataCell(
+                                  Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Icon(statusIcon,
+                                          color: statusColor, size: 16),
+                                      const SizedBox(width: 8),
+                                      Text(
+                                        status.toUpperCase(),
+                                        style: TextStyle(
+                                          color: statusColor,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 10,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                DataCell(
+                                  Tooltip(
+                                    message: source,
+                                    child: Text(filename,
+                                        style: const TextStyle(fontSize: 12)),
+                                  ),
+                                ),
+                                DataCell(Text(attempts.toString(),
+                                    style: const TextStyle(fontSize: 12))),
+                                DataCell(
+                                  Tooltip(
+                                    message: output,
+                                    child: Text(
+                                      output.split('\\').last.split('/').last,
+                                      style: TextStyle(
+                                          color: Colors.white
+                                              .withValues(alpha: 0.4),
+                                          fontSize: 12),
+                                      overflow: TextOverflow.ellipsis,
                                     ),
                                   ),
-                                ],
-                              ),
-                            ),
-                            DataCell(
-                              Tooltip(
-                                message: source,
-                                child: Text(filename, style: const TextStyle(fontSize: 12)),
-                              ),
-                            ),
-                            DataCell(Text(attempts.toString(), style: const TextStyle(fontSize: 12))),
-                            DataCell(
-                              Tooltip(
-                                message: output,
-                                child: Text(
-                                  output.split('\\').last.split('/').last,
-                                  style: TextStyle(color: Colors.white.withValues(alpha: 0.4), fontSize: 12),
-                                  overflow: TextOverflow.ellipsis,
                                 ),
-                              ),
-                            ),
-                          ],
-                        );
-                      }).toList(),
+                              ],
+                            );
+                          }).toList(),
+                        ),
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ),
-          if (_isProcessing) _buildConsoleOverlay(),
-        ],
+              if (_isProcessing) _buildConsoleOverlay(),
+            ],
+          ),
+        ),
       ),
     );
   }
+
+
 
   Widget _buildActionButton({
     required IconData icon,
