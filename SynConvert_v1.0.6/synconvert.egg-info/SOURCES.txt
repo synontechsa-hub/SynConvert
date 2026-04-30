@@ -30,6 +30,7 @@ backend/utils/__init__.py
 backend/utils/logger.py
 backend/utils/paths.py
 frontend/ios/Flutter/ephemeral/flutter_lldb_helper.py
+scratch/convert_icon.py
 scratch/debug_nvenc.py
 synconvert.egg-info/PKG-INFO
 synconvert.egg-info/SOURCES.txt
