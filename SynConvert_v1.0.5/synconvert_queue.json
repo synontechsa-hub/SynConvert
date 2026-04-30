@@ -13,7 +13,7 @@
     "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 02 (BD 1080p) [C0A7DC1B].mkv",
     "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E02 - Uma Musume Pretty Derby S2 02.mkv",
     "preset": "720p_medium",
-    "status": "in_progress",
+    "status": "done",
     "error": null,
     "attempts": 1
   },
@@ -22,45 +22,45 @@
     "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 03 (BD 1080p) [B0A24D76].mkv",
     "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E03 - Uma Musume Pretty Derby S2 03.mkv",
     "preset": "720p_medium",
-    "status": "pending",
+    "status": "done",
     "error": null,
-    "attempts": 0
+    "attempts": 1
   },
   {
     "id": "2ef6f284-e7a3-4581-aaa4-b3e1619871af",
     "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 04 (BD 1080p) [EBD6CA5C].mkv",
     "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E04 - Uma Musume Pretty Derby S2 04.mkv",
     "preset": "720p_medium",
-    "status": "pending",
+    "status": "done",
     "error": null,
-    "attempts": 0
+    "attempts": 1
   },
   {
     "id": "cdb79411-f734-4fdd-b176-7a86cc095eff",
     "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 05 (BD 1080p) [5DF5F7D7].mkv",
     "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E05 - Uma Musume Pretty Derby S2 05.mkv",
     "preset": "720p_medium",
-    "status": "pending",
-    "error": null,
-    "attempts": 0
+    "status": "failed",
+    "error": "[Errno 22] Invalid argument",
+    "attempts": 1
   },
   {
     "id": "cc0f9220-e8dc-4f26-b5f0-b8705afb904a",
     "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 06 (BD 1080p) [C1FA77F6].mkv",
     "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E06 - Uma Musume Pretty Derby S2 06.mkv",
     "preset": "720p_medium",
-    "status": "pending",
+    "status": "done",
     "error": null,
-    "attempts": 0
+    "attempts": 1
   },
   {
     "id": "fe770187-22bc-43c1-b4a3-16532163119e",
     "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 07 (BD 1080p) [5863B592].mkv",
     "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E07 - Uma Musume Pretty Derby S2 07.mkv",
     "preset": "720p_medium",
-    "status": "pending",
-    "error": null,
-    "attempts": 0
+    "status": "failed",
+    "error": "[Errno 22] Invalid argument",
+    "attempts": 1
   },
   {
     "id": "a6159902-e74c-404c-853f-2f3496382f75",
