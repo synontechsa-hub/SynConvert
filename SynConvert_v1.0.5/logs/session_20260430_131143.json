@@ -60,6 +60,66 @@
       "duration_seconds": 142.9284736999998,
       "error": null,
       "timestamp": "2026-04-30T11:25:14.948886+00:00"
+    },
+    {
+      "source": "F:\\Anime\\As a Reincarnated Aristocrat, I`ll Use My Appraisal Skill to Rise in the World\\Season 2\\[Judas] Tensei Kizoku - S02E07.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\Season 2\\S02E07 - Tensei Kizoku S02E07.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 148.3615190999999,
+      "error": null,
+      "timestamp": "2026-04-30T11:27:43.349192+00:00"
+    },
+    {
+      "source": "F:\\Anime\\As a Reincarnated Aristocrat, I`ll Use My Appraisal Skill to Rise in the World\\Season 2\\[Judas] Tensei Kizoku - S02E08v2.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\Season 2\\S02E08 - Tensei Kizoku S02E08V2.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 149.9939459999996,
+      "error": null,
+      "timestamp": "2026-04-30T11:30:13.379335+00:00"
+    },
+    {
+      "source": "F:\\Anime\\As a Reincarnated Aristocrat, I`ll Use My Appraisal Skill to Rise in the World\\Season 2\\[Judas] Tensei Kizoku - S02E09v2.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\Season 2\\S02E09 - Tensei Kizoku S02E09V2.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 127.02330419999998,
+      "error": null,
+      "timestamp": "2026-04-30T11:32:20.447092+00:00"
+    },
+    {
+      "source": "F:\\Anime\\As a Reincarnated Aristocrat, I`ll Use My Appraisal Skill to Rise in the World\\Season 2\\[Judas] Tensei Kizoku - S02E10.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\Season 2\\S02E10 - Tensei Kizoku S02E10.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 140.9558320999995,
+      "error": null,
+      "timestamp": "2026-04-30T11:34:41.436435+00:00"
+    },
+    {
+      "source": "F:\\Anime\\As a Reincarnated Aristocrat, I`ll Use My Appraisal Skill to Rise in the World\\Season 2\\[Judas] Tensei Kizoku - S02E11v2.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\Season 2\\S02E11 - Tensei Kizoku S02E11V2.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 159.27474710000024,
+      "error": null,
+      "timestamp": "2026-04-30T11:37:20.740946+00:00"
+    },
+    {
+      "source": "F:\\Anime\\As a Reincarnated Aristocrat, I`ll Use My Appraisal Skill to Rise in the World\\Season 2\\[Judas] Tensei Kizoku - S02E12v2.mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\Season 2\\S02E12 - Tensei Kizoku S02E12V2.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 156.43000130000019,
+      "error": null,
+      "timestamp": "2026-04-30T11:39:57.203960+00:00"
     }
   ]
 }

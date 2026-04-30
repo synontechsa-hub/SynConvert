@@ -298,7 +298,7 @@ class _QueuePageState extends State<QueuePage> with AutomaticKeepAliveClientMixi
                       _buildActionButton(
                         icon: Icons.cleaning_services_rounded,
                         label: 'Clear Done',
-                        color: Colors.white24,
+                        color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.3),
                         onPressed: _jobs != null &&
                                 _jobs!.any((j) =>
                                     j['status'] == 'done' ||
@@ -400,7 +400,7 @@ class _QueuePageState extends State<QueuePage> with AutomaticKeepAliveClientMixi
                             final filename =
                                 source.split('\\').last.split('/').last;
  
-                            Color statusColor = Colors.white70;
+                            Color statusColor = Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7);
                             IconData statusIcon = Icons.help_outline;
  
                             switch (status) {
@@ -421,7 +421,7 @@ class _QueuePageState extends State<QueuePage> with AutomaticKeepAliveClientMixi
                                 statusIcon = Icons.error_rounded;
                                 break;
                               case 'skipped':
-                                statusColor = Colors.white38;
+                                statusColor = Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.3);
                                 statusIcon = Icons.skip_next_rounded;
                                 break;
                             }

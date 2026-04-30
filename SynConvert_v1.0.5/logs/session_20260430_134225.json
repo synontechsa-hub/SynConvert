@@ -1,0 +1,85 @@
+{
+  "session_start": "2026-04-30T13:42:25.865703",
+  "records": [
+    {
+      "source": "F:\\Anime\\Beheneko - The Elf-Girl's Cat is Secretly an S-Ranked Monster\\[Ironclad] Beheneko - ED [BD.1080p.AV1].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E01 - Beheneko Ed.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 13.388157500000489,
+      "error": null,
+      "timestamp": "2026-04-30T11:42:39.267977+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Beheneko - The Elf-Girl's Cat is Secretly an S-Ranked Monster\\[Ironclad] Beheneko - OP [BD.1080p.AV1].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E02 - Beheneko Op.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 14.222314200000255,
+      "error": null,
+      "timestamp": "2026-04-30T11:42:53.524510+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Beheneko - The Elf-Girl's Cat is Secretly an S-Ranked Monster\\[Ironclad] Beheneko - OPv2 [BD.1080p.AV1].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E03 - Beheneko Opv2.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 14.281162799999947,
+      "error": null,
+      "timestamp": "2026-04-30T11:43:07.838211+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Beheneko - The Elf-Girl's Cat is Secretly an S-Ranked Monster\\[Ironclad] Beheneko - S01E01 [BD.1080p.AV1].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E01 - Beheneko S01E01.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 204.68262210000012,
+      "error": null,
+      "timestamp": "2026-04-30T11:46:32.550674+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Beheneko - The Elf-Girl's Cat is Secretly an S-Ranked Monster\\[Ironclad] Beheneko - S01E02 [BD.1080p.AV1].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E02 - Beheneko S01E02.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 168.6749748000002,
+      "error": null,
+      "timestamp": "2026-04-30T11:49:21.259723+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Beheneko - The Elf-Girl's Cat is Secretly an S-Ranked Monster\\[Ironclad] Beheneko - S01E03 [BD.1080p.AV1].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E03 - Beheneko S01E03.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 172.2451785000003,
+      "error": null,
+      "timestamp": "2026-04-30T11:52:13.549408+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Beheneko - The Elf-Girl's Cat is Secretly an S-Ranked Monster\\[Ironclad] Beheneko - S01E04 [BD.1080p.AV1].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E04 - Beheneko S01E04.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 184.94168720000107,
+      "error": null,
+      "timestamp": "2026-04-30T11:55:18.521406+00:00"
+    },
+    {
+      "source": "F:\\Anime\\Beheneko - The Elf-Girl's Cat is Secretly an S-Ranked Monster\\[Ironclad] Beheneko - S01E05 [BD.1080p.AV1].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E05 - Beheneko S01E05.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 162.30220279999958,
+      "error": null,
+      "timestamp": "2026-04-30T11:58:00.860991+00:00"
+    }
+  ]
+}

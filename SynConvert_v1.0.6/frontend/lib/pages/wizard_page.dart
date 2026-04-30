@@ -212,7 +212,7 @@ class _WizardPageState extends State<WizardPage> with AutomaticKeepAliveClientMi
         duration: const Duration(milliseconds: 200),
         decoration: BoxDecoration(
           color: _isDragging
-              ? Colors.white.withValues(alpha: 0.05)
+              ? Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.05)
               : Colors.transparent,
         ),
         child: Padding(
