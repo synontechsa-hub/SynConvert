@@ -1,0 +1,5 @@
+backend
+frontend
+logs
+scratch
+tests

@@ -1,0 +1,2 @@
+[console_scripts]
+synconvert = backend.main:main
