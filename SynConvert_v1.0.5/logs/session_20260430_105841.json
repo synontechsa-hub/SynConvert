@@ -1,0 +1,15 @@
+{
+  "session_start": "2026-04-30T10:58:41.281643",
+  "records": [
+    {
+      "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 01 (BD 1080p) [9F9CF4B9].mkv",
+      "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E01 - Uma Musume Pretty Derby S2 01.mkv",
+      "preset": "720p_medium",
+      "encoder": "h264_nvenc",
+      "status": "success",
+      "duration_seconds": 178.5957828999999,
+      "error": null,
+      "timestamp": "2026-04-30T09:01:39.891002+00:00"
+    }
+  ]
+}

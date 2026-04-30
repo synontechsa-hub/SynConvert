@@ -1,119 +1,119 @@
 [
   {
-    "id": "955d0ade-ed2f-486c-bae8-69f29fe3a595",
-    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 01 (BD 1080p) [761E3F3E].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E01 - Uma Musume Pretty Derby 01.mkv",
+    "id": "30751c26-078d-4746-8cf1-8661323bbd23",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 01 (BD 1080p) [9F9CF4B9].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E01 - Uma Musume Pretty Derby S2 01.mkv",
     "preset": "720p_medium",
     "status": "done",
     "error": null,
     "attempts": 1
   },
   {
-    "id": "d7bb130c-67d0-42d7-8849-4f595ac25640",
-    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 02 (BD 1080p) [A2A3156F].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E02 - Uma Musume Pretty Derby 02.mkv",
+    "id": "4a8a4345-70f6-4749-a9d8-d5fb5be0668a",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 02 (BD 1080p) [C0A7DC1B].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E02 - Uma Musume Pretty Derby S2 02.mkv",
     "preset": "720p_medium",
-    "status": "done",
+    "status": "in_progress",
     "error": null,
     "attempts": 1
   },
   {
-    "id": "d20e91c3-0708-4e4c-8cb4-77576983695d",
-    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 03 (BD 1080p) [2A012883].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E03 - Uma Musume Pretty Derby 03.mkv",
+    "id": "3e45076c-1ae3-4879-b9f1-8f76005d44d8",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 03 (BD 1080p) [B0A24D76].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E03 - Uma Musume Pretty Derby S2 03.mkv",
     "preset": "720p_medium",
-    "status": "done",
+    "status": "pending",
     "error": null,
-    "attempts": 1
+    "attempts": 0
   },
   {
-    "id": "1c8269db-5401-4165-b0d7-d3abcbcbbc32",
-    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 04 (BD 1080p) [C85795F8].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E04 - Uma Musume Pretty Derby 04.mkv",
+    "id": "2ef6f284-e7a3-4581-aaa4-b3e1619871af",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 04 (BD 1080p) [EBD6CA5C].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E04 - Uma Musume Pretty Derby S2 04.mkv",
     "preset": "720p_medium",
-    "status": "done",
+    "status": "pending",
     "error": null,
-    "attempts": 1
+    "attempts": 0
   },
   {
-    "id": "2ab28e03-bbd2-4e65-b956-439f3944b9e3",
-    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 05 (BD 1080p) [BE60BF96].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E05 - Uma Musume Pretty Derby 05.mkv",
+    "id": "cdb79411-f734-4fdd-b176-7a86cc095eff",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 05 (BD 1080p) [5DF5F7D7].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E05 - Uma Musume Pretty Derby S2 05.mkv",
     "preset": "720p_medium",
-    "status": "done",
+    "status": "pending",
     "error": null,
-    "attempts": 1
+    "attempts": 0
   },
   {
-    "id": "92b8a26c-0e6e-4d54-8b31-2a32bfdeebfc",
-    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 06 (BD 1080p) [42F4C024].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E06 - Uma Musume Pretty Derby 06.mkv",
+    "id": "cc0f9220-e8dc-4f26-b5f0-b8705afb904a",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 06 (BD 1080p) [C1FA77F6].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E06 - Uma Musume Pretty Derby S2 06.mkv",
     "preset": "720p_medium",
-    "status": "done",
+    "status": "pending",
     "error": null,
-    "attempts": 1
+    "attempts": 0
   },
   {
-    "id": "91b458dd-4a3d-49d8-92a0-df3945093db4",
-    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 07 (BD 1080p) [E33BE8CF].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E07 - Uma Musume Pretty Derby 07.mkv",
+    "id": "fe770187-22bc-43c1-b4a3-16532163119e",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 07 (BD 1080p) [5863B592].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E07 - Uma Musume Pretty Derby S2 07.mkv",
     "preset": "720p_medium",
-    "status": "done",
+    "status": "pending",
     "error": null,
-    "attempts": 1
+    "attempts": 0
   },
   {
-    "id": "555f38a5-cb6b-432a-aa31-8bd1778fd296",
-    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 08 (BD 1080p) [90BF3A01].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E08 - Uma Musume Pretty Derby 08.mkv",
+    "id": "a6159902-e74c-404c-853f-2f3496382f75",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 08 (BD 1080p) [26D44F05].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E08 - Uma Musume Pretty Derby S2 08.mkv",
     "preset": "720p_medium",
-    "status": "done",
+    "status": "pending",
     "error": null,
-    "attempts": 1
+    "attempts": 0
   },
   {
-    "id": "d0b68500-7cf2-4556-b326-c665d279ef7e",
-    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 09 (BD 1080p) [A26ABDD9].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E09 - Uma Musume Pretty Derby 09.mkv",
+    "id": "450e021b-be47-4438-a6e8-d5cb9d6eb718",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 09 (BD 1080p) [87ED26CD].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E09 - Uma Musume Pretty Derby S2 09.mkv",
     "preset": "720p_medium",
-    "status": "done",
+    "status": "pending",
     "error": null,
-    "attempts": 1
+    "attempts": 0
   },
   {
-    "id": "9bcb0854-d958-4bf4-a093-4c9f40cd6cbb",
-    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 10 (BD 1080p) [AC0FD709].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E10 - Uma Musume Pretty Derby 10.mkv",
+    "id": "1799ff9d-2580-4bfd-8d1f-4527ef319e77",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 10 (BD 1080p) [C5B54315].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E10 - Uma Musume Pretty Derby S2 10.mkv",
     "preset": "720p_medium",
-    "status": "done",
+    "status": "pending",
     "error": null,
-    "attempts": 1
+    "attempts": 0
   },
   {
-    "id": "d0eb5e69-fc9c-4f7e-8915-acc9c0552ba6",
-    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 11 (BD 1080p) [45FD3EE7].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E11 - Uma Musume Pretty Derby 11.mkv",
+    "id": "af8e4a07-6d48-4873-9797-ec819dd14ff3",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 11 (BD 1080p) [3F642CD5].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E11 - Uma Musume Pretty Derby S2 11.mkv",
     "preset": "720p_medium",
-    "status": "done",
+    "status": "pending",
     "error": null,
-    "attempts": 1
+    "attempts": 0
   },
   {
-    "id": "cbd8b066-ee78-4522-8310-ba4f992d1f36",
-    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 12 (BD 1080p) [61B3CF30].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E12 - Uma Musume Pretty Derby 12.mkv",
+    "id": "f2d5be8b-4b48-47cd-95e9-f7ff1cfe39dc",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 12 (BD 1080p) [6000063E].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E12 - Uma Musume Pretty Derby S2 12.mkv",
     "preset": "720p_medium",
-    "status": "done",
+    "status": "pending",
     "error": null,
-    "attempts": 1
+    "attempts": 0
   },
   {
-    "id": "866ae61d-6168-4510-bc5c-e846f824634d",
-    "source": "F:\\Anime\\Uma Musume\\Season 1\\[MiniMTBB] Uma Musume Pretty Derby - 13 (BD 1080p) [1401A473].mkv",
-    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S01E13 - Uma Musume Pretty Derby 13.mkv",
+    "id": "b120fb7f-68ac-486f-a925-d6299ad86e7f",
+    "source": "F:\\Anime\\Uma Musume\\Season 2\\[MiniMTBB] Uma Musume Pretty Derby S2 - 13 (BD 1080p) [D5CE4867].mkv",
+    "output": "C:\\Users\\brcgr\\OneDrive\\Desktop\\Convert\\S02E13 - Uma Musume Pretty Derby S2 13.mkv",
     "preset": "720p_medium",
-    "status": "done",
+    "status": "pending",
     "error": null,
-    "attempts": 1
+    "attempts": 0
   }
 ]
