@@ -120,18 +120,14 @@ class _MainLayoutState extends State<MainLayout> {
             leading: Column(
               children: [
                 const SizedBox(height: 16),
-                Container(
-                  width: 48,
-                  height: 48,
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [Color(0xFF00D2FF), Color(0xFF7000FF)],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
-                    borderRadius: BorderRadius.circular(12),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.asset(
+                    'assets/logo.png',
+                    width: 48,
+                    height: 48,
+                    fit: BoxFit.contain,
                   ),
-                  child: const Icon(Icons.bolt, color: Colors.white, size: 32),
                 ),
                 const SizedBox(height: 32),
               ],
